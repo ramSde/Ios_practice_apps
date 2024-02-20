@@ -11,6 +11,7 @@ class weather_Cell: UITableViewCell {
     @IBOutlet weak var weatherLabel : UILabel!
     @IBOutlet weak var weatherDescription: UILabel!
     @IBOutlet weak var weatherIcon: UIImageView!
+    var imagestring : String = ""
     
 
     override func awakeFromNib() {
@@ -41,13 +42,18 @@ class weather_Cell: UITableViewCell {
       weatherDescription.text = model.description
       if(model.main.contains("Rain")){
           weatherIcon.image = UIImage(named: "rain")
+          imagestring = "rain"
       }
       if(model.main.contains("Clear")){
           weatherIcon.image = UIImage(named: "clear")
+          imagestring = "clear"
+      
       }
       if(model.main.contains("Cloud")){
           weatherIcon.image = UIImage(named: "cloud")
+          imagestring = "cloud"
       }
+      
     
       
         	

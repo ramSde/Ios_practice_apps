@@ -42,6 +42,35 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ftos" {
+            if let destinationVC = segue.destination as? SecondScreenViewController {
+                if let data = sender as? (String, String,String) {
+                    // Pass the data to the second screen
+                    print("\(data.0)")
+                    print("\(data.1)")
+                    print("\(data.2)")
+                    destinationVC.maintext = data.0
+                    destinationVC.descriptionofweather = data.1
+                    destinationVC.imagestring = data.2
+                }
+            }
+        }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let cell = tableView.cellForRow(at: indexPath) as? weather_Cell {
+              // Access data from your cell, for example:
+            let maintext = cell.weatherLabel.text
+            let descriptionText = cell.weatherDescription.text
+            let icontext = cell.imagestring
+
+              // Perform navigation to the second screen
+              performSegue(withIdentifier: "ftos", sender: (maintext, descriptionText,icontext))
+          }
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: weather_Cell.idnetifier,for: indexPath) as! weather_Cell
