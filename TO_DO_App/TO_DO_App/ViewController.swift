@@ -11,7 +11,7 @@ struct TODO : Codable{
     let task : String
     let taskDescription : String
 }
-var data :[TODO] = [TODO(task: "RAM", taskDescription: "MEHUL")]
+    var data :[TODO] = []
 
 class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     static let shared = ViewController()
@@ -25,8 +25,11 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "todo_Cell",for: indexPath) as! todo_Cell
+       
         print(" adding data to cell \(data)")
+        cell.selectionStyle = .none
         cell.configure(with: data[indexPath.row])
+     
         return cell
     }
 
@@ -40,11 +43,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     override func viewWillAppear(_ animated: Bool) {
         updateTableData()
     }
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
-    }
    
-   
+
     
     
     
@@ -68,6 +68,8 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         // Do any additional setup after loading the view.
     }
 
+    }
 
-}
+
+
 

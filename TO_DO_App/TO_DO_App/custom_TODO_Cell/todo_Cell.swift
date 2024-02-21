@@ -8,14 +8,20 @@
 import UIKit
 
 class todo_Cell: UITableViewCell {
+   
+   var cell_index : Int = 0
     @IBOutlet weak var tasklabel : UILabel!
     @IBOutlet weak var taskdecription : UILabel!
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.backgroundColor = .gray
+     
         // Initialization code
     }
+   
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -30,9 +36,25 @@ class todo_Cell: UITableViewCell {
     func configure(with model : TODO){
         tasklabel.text = model.task
         taskdecription.text = model.taskDescription
-        
+    
         
         
     }
+        @IBAction func  deletebtn(_ sender : UIButton){
+          
+//            if let tableView = self.superview as? UITableView{
+//
+//            let cell = sender.superview as! UITableViewCell
+//            let indexPath = tableView.indexPath(for: cell)
+//                data.remove(at: indexPath!.row)
+//
+//               }
+//
+        print("data removed")
+        
+    }
+    
+    
+    
     
 }

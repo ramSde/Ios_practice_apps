@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JxM-Qd-TDo">
-                        <rect key="frame" x="20" y="35" width="33" height="13"/>
+                        <rect key="frame" x="20" y="35" width="101" height="13"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -28,13 +28,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wja-Yr-4Or">
+                        <rect key="frame" x="331" y="24" width="50" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="DrB-x8-PLs"/>
+                            <constraint firstAttribute="height" id="xXx-Ab-ITd"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="Delete"/>
+                        <connections>
+                            <action selector="deletebtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vtn-jK-Qu0"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="JxM-Qd-TDo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="2ve-5P-b1y"/>
                     <constraint firstItem="RDX-ei-NsY" firstAttribute="top" secondItem="JxM-Qd-TDo" secondAttribute="bottom" constant="20.666666666666664" id="5w7-u4-chj"/>
+                    <constraint firstAttribute="trailing" secondItem="wja-Yr-4Or" secondAttribute="trailing" constant="37" id="GOZ-0M-qDf"/>
                     <constraint firstItem="JxM-Qd-TDo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="RGU-Xg-Sdk"/>
                     <constraint firstItem="RDX-ei-NsY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" symbolic="YES" id="VhE-2X-piU"/>
+                    <constraint firstItem="wja-Yr-4Or" firstAttribute="leading" secondItem="JxM-Qd-TDo" secondAttribute="trailing" constant="170" id="exf-zc-PuA"/>
                     <constraint firstAttribute="bottom" secondItem="RDX-ei-NsY" secondAttribute="bottom" constant="36.666666666666671" id="qiJ-yB-vTG"/>
+                    <constraint firstItem="wja-Yr-4Or" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="24" id="vz8-4x-zcb"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
