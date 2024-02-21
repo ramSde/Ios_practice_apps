@@ -14,6 +14,9 @@
 		3830BB002B8476E200FE3C3D /* TO_DO_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3830BAFE2B8476E200FE3C3D /* TO_DO_App.xcdatamodeld */; };
 		3830BB022B8476E300FE3C3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3830BB012B8476E300FE3C3D /* Assets.xcassets */; };
 		3830BB052B8476E300FE3C3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3830BB032B8476E300FE3C3D /* LaunchScreen.storyboard */; };
+		387C1BC62B84CF2D00E7E3B9 /* todo_Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387C1BC42B84CF2D00E7E3B9 /* todo_Cell.swift */; };
+		387C1BC72B84CF2D00E7E3B9 /* todo_Cell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 387C1BC52B84CF2D00E7E3B9 /* todo_Cell.xib */; };
+		387C1BCB2B84D05400E7E3B9 /* data_EntryPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387C1BCA2B84D05400E7E3B9 /* data_EntryPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		3830BB012B8476E300FE3C3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3830BB042B8476E300FE3C3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3830BB062B8476E300FE3C3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		387C1BC42B84CF2D00E7E3B9 /* todo_Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todo_Cell.swift; sourceTree = "<group>"; };
+		387C1BC52B84CF2D00E7E3B9 /* todo_Cell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = todo_Cell.xib; sourceTree = "<group>"; };
+		387C1BCA2B84D05400E7E3B9 /* data_EntryPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = data_EntryPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		3830BAF42B8476E200FE3C3D /* TO_DO_App */ = {
 			isa = PBXGroup;
 			children = (
+				387C1BC32B84CEE300E7E3B9 /* custom_TODO_Cell */,
 				3830BAF52B8476E200FE3C3D /* AppDelegate.swift */,
 				3830BAF72B8476E200FE3C3D /* SceneDelegate.swift */,
 				3830BAF92B8476E200FE3C3D /* ViewController.swift */,
@@ -66,8 +73,18 @@
 				3830BB032B8476E300FE3C3D /* LaunchScreen.storyboard */,
 				3830BB062B8476E300FE3C3D /* Info.plist */,
 				3830BAFE2B8476E200FE3C3D /* TO_DO_App.xcdatamodeld */,
+				387C1BCA2B84D05400E7E3B9 /* data_EntryPage.swift */,
 			);
 			path = TO_DO_App;
+			sourceTree = "<group>";
+		};
+		387C1BC32B84CEE300E7E3B9 /* custom_TODO_Cell */ = {
+			isa = PBXGroup;
+			children = (
+				387C1BC42B84CF2D00E7E3B9 /* todo_Cell.swift */,
+				387C1BC52B84CF2D00E7E3B9 /* todo_Cell.xib */,
+			);
+			path = custom_TODO_Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +148,7 @@
 				3830BB052B8476E300FE3C3D /* LaunchScreen.storyboard in Resources */,
 				3830BB022B8476E300FE3C3D /* Assets.xcassets in Resources */,
 				3830BAFD2B8476E200FE3C3D /* Main.storyboard in Resources */,
+				387C1BC72B84CF2D00E7E3B9 /* todo_Cell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +159,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				387C1BC62B84CF2D00E7E3B9 /* todo_Cell.swift in Sources */,
+				387C1BCB2B84D05400E7E3B9 /* data_EntryPage.swift in Sources */,
 				3830BAFA2B8476E200FE3C3D /* ViewController.swift in Sources */,
 				3830BAF62B8476E200FE3C3D /* AppDelegate.swift in Sources */,
 				3830BAF82B8476E200FE3C3D /* SceneDelegate.swift in Sources */,

@@ -77,7 +77,7 @@ class ViewController: UIViewController , UITableViewDelegate , UITableViewDataSo
         cell.configure(with: models[indexPath.row])
 return cell
     }
-   
+    
     
     
  func setuplocation()
