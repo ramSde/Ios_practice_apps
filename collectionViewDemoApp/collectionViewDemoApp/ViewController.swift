@@ -8,39 +8,52 @@
 import UIKit
 
 class ViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
-    var data : [String] = ["imagefl","imagefl","imagefl","imagefl","imagefl"]
+    var data : [String] = [
+        "imagescl","imagefl","XY","imagefl","imagescl","XY","imagescl","imagefl","XY","imagefl","XY","imagescl","imagefl","XY","imagescl","imagefl","XY","imagefl","XY","imagescl","XY","imagescl","imagefl","XY","imagefl","XY"
+        ,"imagescl","imagefl","imagefl","imagescl","imagefl","imagefl","imagescl","imagescl","imagefl","imagefl","imagescl","imagefl","imagefl","imagefl","imagescl","XY","imagefl","imagescl","XY","imagescl","imagefl","XY","imagefl","imagescl","imagefl","XY","imagescl","imagefl","imagescl"
+    ]
     @IBOutlet weak var list_view : UICollectionView!
    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("\(data.count)")
         
         return data.count
     }
     
-    
+ 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: image_Cell_CollectionViewCell.identifier, for: indexPath) as!  image_Cell_CollectionViewCell
         print(" adding data in cell")
+    
         
-        cell.configure(image: data[indexPath.section])
+        cell.configure(image: data[indexPath.item])
         
-        cell.configure2(image: data[indexPath.section])
+    
         return cell
         
         
     }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           // Calculate the cell size based on the screen dimensions
-           let screenWidth = UIScreen.main.bounds.width
-        let screenHeight = UIScreen.main.bounds.height
-           let cellWidth = screenWidth  // You can adjust this value as needed
-        let cellHeight = screenHeight/5 // You can adjust this value as needed
-
-           return CGSize(width: cellWidth, height: cellHeight)
+    func collectionView(_ collectionView: UICollectionView,
+                   layout collectionViewLayout: UICollectionViewLayout,
+                   insetForSectionAt section: Int) -> UIEdgeInsets {
+         /// 2
+         return UIEdgeInsets(top: 1.0, left: 8.0, bottom: 1.0, right: 8.0)
+     }
+    func collectionView(_ collectionView: UICollectionView,
+                      layout collectionViewLayout: UICollectionViewLayout,
+                      sizeForItemAt indexPath: IndexPath) -> CGSize {
+           /// 4
+           let lay = collectionViewLayout as! UICollectionViewFlowLayout
+           /// 5
+           let widthPerItem = collectionView.frame.width / 2 - lay.minimumInteritemSpacing
+           /// 6
+           return CGSize(width: widthPerItem - 8, height: 250)
        }
     
+
     
     
     
@@ -55,8 +68,10 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
               let layout = UICollectionViewFlowLayout()
               // Set the scroll direction to horizontal for a list view
               layout.scrollDirection = .vertical
-              
-              // Apply the layout to your UICollectionView
+        layout.minimumLineSpacing = 8
+            /// 5
+            layout.minimumInteritemSpacing = 4
+//               Apply the layout to your UICollectionView
               list_view.collectionViewLayout = layout
         list_view.register(image_Cell_CollectionViewCell.nib(), forCellWithReuseIdentifier: "image_Cell_CollectionViewCell")
         

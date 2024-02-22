@@ -10,7 +10,7 @@ import UIKit
 class image_Cell_CollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var list_image: UIImageView!
-    @IBOutlet weak var list_image2: UIImageView!
+  
       
       override func awakeFromNib() {
           super.awakeFromNib()
@@ -27,9 +27,6 @@ class image_Cell_CollectionViewCell: UICollectionViewCell {
           list_image.image = UIImage(named: image)
          
       }
-    func configure2(image: String) {
-        list_image2.image = UIImage(named: image)
-       
-    }
+   
 
 }
