@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "43"
             endingLineNumber = "43"
-            landmarkName = "configure(with:)"
+            landmarkName = "deletebtn(_:)"
             landmarkType = "7">
             <Locations>
                <Location
