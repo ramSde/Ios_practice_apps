@@ -32,6 +32,9 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
      
         return cell
     }
+   
+   
+    
 
     @IBAction func addNewTODO(_ sender: UIButton) {
         print(" currently data is    \(data)")
@@ -63,6 +66,7 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
         todo_table.delegate = self
         todo_table.dataSource = self
         todo_table.register(todo_Cell.nib(), forCellReuseIdentifier: todo_Cell.identifier)
+     
         updateTableData()
        
         // Do any additional setup after loading the view.

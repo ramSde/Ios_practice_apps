@@ -12,7 +12,7 @@ class todo_Cell: UITableViewCell {
    var cell_index : Int = 0
     @IBOutlet weak var tasklabel : UILabel!
     @IBOutlet weak var taskdecription : UILabel!
-
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -36,7 +36,7 @@ class todo_Cell: UITableViewCell {
     func configure(with model : TODO){
         tasklabel.text = model.task
         taskdecription.text = model.taskDescription
-    
+       
         
         
     }
