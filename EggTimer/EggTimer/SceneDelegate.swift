@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  MusicPlayer
+//  EggTimer
 //
-//  Created by Zignuts Tchnolab on 23/02/24.
+//  Created by Zignuts Tchnolab on 26/02/24.
 //
 
 import UIKit
