@@ -39,21 +39,44 @@ class addDataViewController: UIViewController {
     @IBOutlet weak var EnterCostum: UITextField!
     
     @IBOutlet weak var EnterDateFiled: UITextField!
+    @IBAction func AddNewDataBtn(_ sender: UIButton) {
+        guard let task = EnterCostum.text
+        else {
+         
+            return
+        }
+                guard let timefortask = EnterDateFiled.text
+        else {
+                 
+                    return
+                }
+        if(!task.isEmpty && !timefortask.isEmpty){
+            data.append(DateAndTimeModel(DateAndTimeString: timefortask, costum: task))
+            navigationController?.popViewController(animated: true)
+        }
+    }
     override func viewDidLoad() {
        
         super.viewDidLoad()
         initializeView()
         dateTimePicker.datePickerMode = .dateAndTime
+        dateTimePicker.preferredDatePickerStyle = .inline
         EnterDateFiled.inputView = dateTimePicker
+        
+        
+        dateTimePicker.frame = CGRect(x: 0, y: 0, width: 0, height: 450)
+        
         let toolbar = UIToolbar()
                 toolbar.sizeToFit()
 //
                 let doneDateButton = UIBarButtonItem(title: "Done (Date)", style: .plain, target: self, action: #selector(doneDateButtonPressed))
-                let doneTimeButton = UIBarButtonItem(title: "Done (Time)", style: .plain, target: self, action: #selector(doneTimeButtonPressed))
+           
 
-                toolbar.setItems([doneDateButton, doneTimeButton], animated: true)
+                toolbar.setItems([doneDateButton], animated: true)
+        
 
         EnterDateFiled.inputAccessoryView = toolbar
+       
 //
 //        let stackView = UIStackView(arrangedSubviews: [dateTimePicker, toolbar])
 //                stackView.axis = .vertical
@@ -75,16 +98,10 @@ class addDataViewController: UIViewController {
            let dateFormatter = DateFormatter()
            dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         EnterDateFiled.text = dateFormatter.string(from: dateTimePicker.date)
+        EnterDateFiled.textColor = .blue
         EnterDateFiled.resignFirstResponder()
        }
 
-       @objc func doneTimeButtonPressed() {
-           // Format the selected time and update the text field
-           let timeFormatter = DateFormatter()
-           timeFormatter.dateFormat = "HH:mm"
-           EnterDateFiled.text = timeFormatter.string(from: dateTimePicker.date)
-           EnterDateFiled.resignFirstResponder()
-       }
     
     @IBAction func CancelBtn(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)

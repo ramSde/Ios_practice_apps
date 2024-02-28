@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="D4R-VJ-RGZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WWf-Zj-NU8">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
@@ -83,13 +83,89 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="iWO-6F-o31">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="753"/>
                                             </imageView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IZ7-3m-82F">
+                                                <rect key="frame" x="0.0" y="0.0" width="406" height="753"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </tableView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="73R-D0-cYr" userLabel="listOfReminder">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="753"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="rKm-9x-C7B">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="753"/>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TsX-1i-SdD">
+                                                        <rect key="frame" x="52" y="50" width="310" height="106"/>
+                                                        <subviews>
+                                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In order to start notify when you're not on app, you can set yourself reminders here. We will send you a notification." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZVm-a0-702">
+                                                                <rect key="frame" x="5" y="5" width="280" height="91"/>
+                                                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="280" id="gVj-5s-AID"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                                <nil key="textColor"/>
+                                                                <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <constraints>
+                                                            <constraint firstItem="ZVm-a0-702" firstAttribute="leading" secondItem="TsX-1i-SdD" secondAttribute="leading" constant="5" id="gF8-Qd-voY"/>
+                                                            <constraint firstItem="ZVm-a0-702" firstAttribute="top" secondItem="TsX-1i-SdD" secondAttribute="top" constant="5" id="iuW-WR-GrT"/>
+                                                            <constraint firstAttribute="bottom" secondItem="ZVm-a0-702" secondAttribute="bottom" constant="10" id="kEb-ks-Xdx"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.44999998807907104" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no reminder set yet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="RUz-1e-HDP">
+                                                        <rect key="frame" x="117.33333333333333" y="366" width="179.66666666666669" height="15.666666666666686"/>
+                                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.2953228477" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDJ-qq-7AV">
+                                                        <rect key="frame" x="57" y="396.66666666666663" width="300" height="66"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="cm5-eh-sLW"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="button">
+                                                            <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="CreateNewReminder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8g0-TP-Saq"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="rKm-9x-C7B" secondAttribute="bottom" id="1Ei-3m-WEO"/>
+                                                    <constraint firstItem="RUz-1e-HDP" firstAttribute="top" secondItem="ZVm-a0-702" secondAttribute="bottom" constant="220" id="1eA-0Y-oIe"/>
+                                                    <constraint firstItem="rKm-9x-C7B" firstAttribute="leading" secondItem="73R-D0-cYr" secondAttribute="leading" id="1hg-mk-fq9"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rKm-9x-C7B" secondAttribute="trailing" id="43A-XY-k7X"/>
+                                                    <constraint firstItem="TsX-1i-SdD" firstAttribute="leading" secondItem="73R-D0-cYr" secondAttribute="leading" constant="52" id="4Hw-ij-9Uc"/>
+                                                    <constraint firstItem="rKm-9x-C7B" firstAttribute="top" secondItem="73R-D0-cYr" secondAttribute="top" id="4L3-F1-XLI"/>
+                                                    <constraint firstItem="TsX-1i-SdD" firstAttribute="centerX" secondItem="73R-D0-cYr" secondAttribute="centerX" id="H4U-Eg-mxy"/>
+                                                    <constraint firstItem="JDJ-qq-7AV" firstAttribute="centerX" secondItem="73R-D0-cYr" secondAttribute="centerX" id="IKA-Pb-wzj"/>
+                                                    <constraint firstItem="RUz-1e-HDP" firstAttribute="centerX" secondItem="73R-D0-cYr" secondAttribute="centerX" id="P8W-Zc-Vp6"/>
+                                                    <constraint firstItem="JDJ-qq-7AV" firstAttribute="top" secondItem="RUz-1e-HDP" secondAttribute="bottom" constant="15" id="Q2Y-4Z-9Z1"/>
+                                                    <constraint firstItem="TsX-1i-SdD" firstAttribute="top" secondItem="73R-D0-cYr" secondAttribute="top" constant="50" id="d7s-Xg-RTW"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="iWO-6F-o31" secondAttribute="bottom" id="1tR-o4-dRn"/>
+                                            <constraint firstAttribute="trailing" secondItem="73R-D0-cYr" secondAttribute="trailing" id="2ap-7g-O4R"/>
+                                            <constraint firstAttribute="trailing" secondItem="IZ7-3m-82F" secondAttribute="trailing" constant="8" id="CrL-mf-fIU"/>
                                             <constraint firstItem="iWO-6F-o31" firstAttribute="leading" secondItem="3R8-Qm-IYg" secondAttribute="leading" id="PU6-Ly-RVg"/>
+                                            <constraint firstAttribute="bottom" secondItem="73R-D0-cYr" secondAttribute="bottom" id="SCQ-vd-jXj"/>
+                                            <constraint firstItem="IZ7-3m-82F" firstAttribute="leading" secondItem="3R8-Qm-IYg" secondAttribute="leading" id="X4R-37-NLh"/>
+                                            <constraint firstItem="IZ7-3m-82F" firstAttribute="top" secondItem="3R8-Qm-IYg" secondAttribute="top" id="YPH-M7-nwq"/>
                                             <constraint firstItem="iWO-6F-o31" firstAttribute="top" secondItem="3R8-Qm-IYg" secondAttribute="top" id="cOf-1o-h5P"/>
                                             <constraint firstAttribute="trailing" secondItem="iWO-6F-o31" secondAttribute="trailing" id="cTx-jG-igl"/>
+                                            <constraint firstItem="73R-D0-cYr" firstAttribute="top" secondItem="3R8-Qm-IYg" secondAttribute="top" id="imw-P4-jBu"/>
+                                            <constraint firstAttribute="bottom" secondItem="IZ7-3m-82F" secondAttribute="bottom" id="jVW-oP-dyg"/>
+                                            <constraint firstItem="73R-D0-cYr" firstAttribute="leading" secondItem="3R8-Qm-IYg" secondAttribute="leading" id="sew-J4-HrO"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -114,166 +190,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8XJ-LO-93h"/>
+                    <connections>
+                        <outlet property="DataisEmptyUI" destination="73R-D0-cYr" id="gfz-XO-cmo"/>
+                        <outlet property="EmptyScreenText" destination="TsX-1i-SdD" id="hIy-dB-BQ3"/>
+                        <outlet property="NavigationBarAddNewData" destination="Ycg-dr-nL7" id="ANU-gX-bE3"/>
+                        <outlet property="ReminderTable" destination="IZ7-3m-82F" id="m1p-hK-pXp"/>
+                        <segue destination="e2A-kJ-0JL" kind="show" identifier="mainScreenToAddDataScreen" id="Yd0-HC-X85"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2692.753623188406" y="-35.491071428571423"/>
-        </scene>
-        <!--Add Reminder Page-->
-        <scene sceneID="ecP-ND-W8k">
-            <objects>
-                <viewController id="c4X-9x-LYm" customClass="addReminderPage" customModule="Reminder" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="F3d-b3-MLy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ixy-xR-Trm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xtF-Ev-VPo">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="143"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminders" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="mh7-8Y-JaV">
-                                                <rect key="frame" x="153.66666666666666" y="111" width="106.99999999999997" height="24"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="24" id="XQP-Vu-PlB"/>
-                                                    <constraint firstAttribute="width" constant="107" id="nuV-JR-6YE"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="LondrinaSolid-Regular" family="Londrina Solid" pointSize="19"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vUp-pq-9O2">
-                                                <rect key="frame" x="268" y="90" width="144" height="48"/>
-                                                <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlusBtn" translatesAutoresizingMaskIntoConstraints="NO" id="4N0-Ny-ms4">
-                                                        <rect key="frame" x="0.0" y="21" width="24" height="22"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="22" id="cT9-kX-XRZ"/>
-                                                            <constraint firstAttribute="width" constant="24" id="kJJ-gL-67I"/>
-                                                        </constraints>
-                                                    </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminders" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5VO-m8-clU" userLabel="addReminderBtn">
-                                                        <rect key="frame" x="34" y="21" width="76" height="22.666666666666671"/>
-                                                        <fontDescription key="fontDescription" name="LondrinaSolid-Light" family="Londrina Solid" pointSize="19"/>
-                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="4N0-Ny-ms4" firstAttribute="top" secondItem="vUp-pq-9O2" secondAttribute="top" constant="21" id="4LO-iY-qn3"/>
-                                                    <constraint firstItem="5VO-m8-clU" firstAttribute="centerX" secondItem="vUp-pq-9O2" secondAttribute="centerX" id="67d-By-X1C"/>
-                                                    <constraint firstItem="4N0-Ny-ms4" firstAttribute="leading" secondItem="5VO-m8-clU" secondAttribute="trailing" constant="-110" id="7qz-LE-kwG"/>
-                                                    <constraint firstItem="5VO-m8-clU" firstAttribute="top" secondItem="vUp-pq-9O2" secondAttribute="top" constant="21" id="TRu-nm-fEE"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.42352941179999998" green="0.76078431369999999" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="mh7-8Y-JaV" firstAttribute="centerX" secondItem="xtF-Ev-VPo" secondAttribute="centerX" id="2TB-Mv-9hf"/>
-                                            <constraint firstItem="mh7-8Y-JaV" firstAttribute="top" secondItem="xtF-Ev-VPo" secondAttribute="top" constant="111" id="7Ha-tb-Ne4"/>
-                                            <constraint firstAttribute="height" constant="143" id="J0I-26-Azv"/>
-                                            <constraint firstAttribute="trailing" secondItem="vUp-pq-9O2" secondAttribute="trailing" constant="2" id="VB8-Tn-KkD"/>
-                                            <constraint firstItem="vUp-pq-9O2" firstAttribute="leading" secondItem="mh7-8Y-JaV" secondAttribute="trailing" constant="7.3333333333333712" id="Xld-XU-LdY"/>
-                                            <constraint firstItem="vUp-pq-9O2" firstAttribute="top" secondItem="xtF-Ev-VPo" secondAttribute="top" constant="90" id="adK-8k-0CN"/>
-                                            <constraint firstItem="mh7-8Y-JaV" firstAttribute="centerX" secondItem="xtF-Ev-VPo" secondAttribute="centerX" id="laL-94-B8A"/>
-                                            <constraint firstAttribute="bottom" secondItem="vUp-pq-9O2" secondAttribute="bottom" constant="5" id="qoF-hY-781"/>
-                                        </constraints>
-                                    </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I0R-kZ-fDW" userLabel="listOfReminder">
-                                        <rect key="frame" x="0.0" y="143" width="414" height="753"/>
-                                        <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="NK2-HZ-FWm">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="753"/>
-                                            </imageView>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dc6-dr-gad">
-                                                <rect key="frame" x="52" y="50" width="310" height="106"/>
-                                                <subviews>
-                                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In order to start notify when you're not on app, you can set yourself reminders here. We will send you a notification." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jwi-qO-PcB">
-                                                        <rect key="frame" x="5" y="5" width="280" height="91"/>
-                                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="280" id="FCR-ib-rSX"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                        <nil key="textColor"/>
-                                                        <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                    </label>
-                                                </subviews>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="Jwi-qO-PcB" secondAttribute="bottom" constant="10" id="YSo-8I-SOD"/>
-                                                    <constraint firstItem="Jwi-qO-PcB" firstAttribute="leading" secondItem="dc6-dr-gad" secondAttribute="leading" constant="5" id="dtu-jW-K1X"/>
-                                                    <constraint firstItem="Jwi-qO-PcB" firstAttribute="top" secondItem="dc6-dr-gad" secondAttribute="top" constant="5" id="ecS-17-4Xo"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no reminder set yet" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Itd-YV-Xp4">
-                                                <rect key="frame" x="117.33333333333333" y="366" width="179.66666666666669" height="15.666666666666686"/>
-                                                <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.29532284768211919" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkJ-mJ-dFe">
-                                                <rect key="frame" x="57" y="396.66666666666663" width="300" height="66"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="9Cl-RR-muk"/>
-                                                </constraints>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" image="button">
-                                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                </buttonConfiguration>
-                                                <connections>
-                                                    <action selector="createNewRemiderBtn:" destination="c4X-9x-LYm" eventType="touchUpInside" id="AjZ-Rb-SeK"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstItem="Itd-YV-Xp4" firstAttribute="top" secondItem="Jwi-qO-PcB" secondAttribute="bottom" constant="220" id="AjS-Y1-AP0"/>
-                                            <constraint firstItem="dc6-dr-gad" firstAttribute="leading" secondItem="I0R-kZ-fDW" secondAttribute="leading" constant="52" id="IFc-pv-U4f"/>
-                                            <constraint firstItem="NK2-HZ-FWm" firstAttribute="leading" secondItem="I0R-kZ-fDW" secondAttribute="leading" id="QtO-zl-rSA"/>
-                                            <constraint firstItem="dc6-dr-gad" firstAttribute="centerX" secondItem="I0R-kZ-fDW" secondAttribute="centerX" id="RB7-ZE-vzC"/>
-                                            <constraint firstItem="mkJ-mJ-dFe" firstAttribute="top" secondItem="Itd-YV-Xp4" secondAttribute="bottom" constant="15" id="VoZ-BO-PVL"/>
-                                            <constraint firstItem="NK2-HZ-FWm" firstAttribute="top" secondItem="I0R-kZ-fDW" secondAttribute="top" id="ZMI-3Z-79O"/>
-                                            <constraint firstItem="Itd-YV-Xp4" firstAttribute="centerX" secondItem="I0R-kZ-fDW" secondAttribute="centerX" id="egK-sa-tSZ"/>
-                                            <constraint firstAttribute="bottom" secondItem="NK2-HZ-FWm" secondAttribute="bottom" id="fbJ-gX-UZX"/>
-                                            <constraint firstItem="mkJ-mJ-dFe" firstAttribute="centerX" secondItem="I0R-kZ-fDW" secondAttribute="centerX" id="q9e-Q0-QZ9"/>
-                                            <constraint firstItem="dc6-dr-gad" firstAttribute="top" secondItem="I0R-kZ-fDW" secondAttribute="top" constant="50" id="qaR-wU-KxM"/>
-                                            <constraint firstAttribute="trailing" secondItem="NK2-HZ-FWm" secondAttribute="trailing" id="tKQ-n1-XEt"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="I0R-kZ-fDW" firstAttribute="leading" secondItem="Ixy-xR-Trm" secondAttribute="leading" id="KIV-Uy-4cr"/>
-                                    <constraint firstAttribute="trailing" secondItem="xtF-Ev-VPo" secondAttribute="trailing" id="Kz3-ZF-FzA"/>
-                                    <constraint firstItem="I0R-kZ-fDW" firstAttribute="top" secondItem="xtF-Ev-VPo" secondAttribute="bottom" id="MSY-hR-fzN"/>
-                                    <constraint firstItem="xtF-Ev-VPo" firstAttribute="leading" secondItem="Ixy-xR-Trm" secondAttribute="leading" id="Zzo-wZ-iXq"/>
-                                    <constraint firstAttribute="trailing" secondItem="I0R-kZ-fDW" secondAttribute="trailing" id="epq-Ml-Q4p"/>
-                                    <constraint firstAttribute="bottom" secondItem="I0R-kZ-fDW" secondAttribute="bottom" id="im5-Ab-97s"/>
-                                    <constraint firstItem="xtF-Ev-VPo" firstAttribute="top" secondItem="Ixy-xR-Trm" secondAttribute="top" id="sKn-rV-m5H"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="Asv-sF-XPi"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Ixy-xR-Trm" firstAttribute="trailing" secondItem="Asv-sF-XPi" secondAttribute="trailing" id="7fb-R5-gf8"/>
-                            <constraint firstItem="Ixy-xR-Trm" firstAttribute="top" secondItem="F3d-b3-MLy" secondAttribute="top" id="caT-2s-PXS"/>
-                            <constraint firstAttribute="bottom" secondItem="Ixy-xR-Trm" secondAttribute="bottom" id="h6m-h1-hkW"/>
-                            <constraint firstItem="Ixy-xR-Trm" firstAttribute="leading" secondItem="Asv-sF-XPi" secondAttribute="leading" id="iFM-yA-V00"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="wvI-h9-YdO"/>
-                    <connections>
-                        <outlet property="NavBarAddReminderBtn" destination="vUp-pq-9O2" id="Zm4-Gd-Ucb"/>
-                        <outlet property="textView" destination="dc6-dr-gad" id="43t-cb-665"/>
-                        <segue destination="e2A-kJ-0JL" kind="show" identifier="EmptyScreenToEnterDataScreen" id="rHy-eJ-aaa"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y1l-NV-mYl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1184.0579710144928" y="-35.491071428571423"/>
+            <point key="canvasLocation" x="3602.898550724638" y="-35.491071428571423"/>
         </scene>
         <!--Add Data View Controller-->
         <scene sceneID="gtd-Zh-WK9">
@@ -354,6 +281,9 @@
                                                         <buttonConfiguration key="configuration" style="plain" image="button">
                                                             <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="AddNewDataBtn:" destination="e2A-kJ-0JL" eventType="touchUpInside" id="VKX-U9-u52"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -422,25 +352,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8b5-yc-Hoj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1966.6666666666667" y="-35.491071428571423"/>
+            <point key="canvasLocation" x="4320" y="-35"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="c0T-ZS-9er">
+        <scene sceneID="OjZ-tE-QHP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D4R-VJ-RGZ" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WWf-Zj-NU8" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fKf-Lo-xtq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Zxg-1c-qfq">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="c4X-9x-LYm" kind="relationship" relationship="rootViewController" id="ALq-OX-KYD"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9UR-aW-EkS"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="77R-DR-kVC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mqS-Fh-QJS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="273.91304347826087" y="-35.491071428571423"/>
+            <point key="canvasLocation" x="2692.753623188406" y="-35.491071428571423"/>
         </scene>
     </scenes>
     <resources>

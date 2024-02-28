@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38932CE02B8EFFD600F3A7F0 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38932CDE2B8EFFD600F3A7F0 /* TableViewCell.swift */; };
+		38932CE12B8EFFD600F3A7F0 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38932CDF2B8EFFD600F3A7F0 /* TableViewCell.xib */; };
 		38ADBD3C2B8DB5BE0070E0DF /* LondrinaSolid-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38ADBD372B8DB5BE0070E0DF /* LondrinaSolid-Black.ttf */; };
 		38ADBD3D2B8DB5BE0070E0DF /* LondrinaSolid-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38ADBD382B8DB5BE0070E0DF /* LondrinaSolid-Regular.ttf */; };
 		38ADBD3E2B8DB5BE0070E0DF /* LondrinaSolid-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38ADBD392B8DB5BE0070E0DF /* LondrinaSolid-Thin.ttf */; };
@@ -19,10 +21,11 @@
 		38B25BA42B8CC61200DDBDFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B25BA22B8CC61200DDBDFA /* Main.storyboard */; };
 		38B25BA62B8CC61300DDBDFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38B25BA52B8CC61300DDBDFA /* Assets.xcassets */; };
 		38B25BA92B8CC61300DDBDFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38B25BA72B8CC61300DDBDFA /* LaunchScreen.storyboard */; };
-		38B25BB22B8CC6F900DDBDFA /* addReminderPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B25BB12B8CC6F900DDBDFA /* addReminderPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		38932CDE2B8EFFD600F3A7F0 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		38932CDF2B8EFFD600F3A7F0 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		38ADBD372B8DB5BE0070E0DF /* LondrinaSolid-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Black.ttf"; sourceTree = "<group>"; };
 		38ADBD382B8DB5BE0070E0DF /* LondrinaSolid-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Regular.ttf"; sourceTree = "<group>"; };
 		38ADBD392B8DB5BE0070E0DF /* LondrinaSolid-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Thin.ttf"; sourceTree = "<group>"; };
@@ -37,7 +40,6 @@
 		38B25BA52B8CC61300DDBDFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38B25BA82B8CC61300DDBDFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38B25BAA2B8CC61300DDBDFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38B25BB12B8CC6F900DDBDFA /* addReminderPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addReminderPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		38932CDD2B8EFEC600F3A7F0 /* CcustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				38932CDE2B8EFFD600F3A7F0 /* TableViewCell.swift */,
+				38932CDF2B8EFFD600F3A7F0 /* TableViewCell.xib */,
+			);
+			path = CcustomCell;
+			sourceTree = "<group>";
+		};
 		38ADBD362B8DB5BE0070E0DF /* Londrina_Solid */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +94,7 @@
 		38B25B9B2B8CC61100DDBDFA /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				38932CDD2B8EFEC600F3A7F0 /* CcustomCell */,
 				38B25BB02B8CC6C600DDBDFA /* Screens */,
 				38B25B9C2B8CC61100DDBDFA /* AppDelegate.swift */,
 				38B25B9E2B8CC61200DDBDFA /* SceneDelegate.swift */,
@@ -99,7 +111,6 @@
 		38B25BB02B8CC6C600DDBDFA /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				38B25BB12B8CC6F900DDBDFA /* addReminderPage.swift */,
 				38ADBD442B8DF0B30070E0DF /* addDataViewController.swift */,
 			);
 			path = Screens;
@@ -167,6 +178,7 @@
 				38ADBD3D2B8DB5BE0070E0DF /* LondrinaSolid-Regular.ttf in Resources */,
 				38ADBD402B8DB5BE0070E0DF /* LondrinaSolid-Light.ttf in Resources */,
 				38B25BA92B8CC61300DDBDFA /* LaunchScreen.storyboard in Resources */,
+				38932CE12B8EFFD600F3A7F0 /* TableViewCell.xib in Resources */,
 				38ADBD3E2B8DB5BE0070E0DF /* LondrinaSolid-Thin.ttf in Resources */,
 				38B25BA62B8CC61300DDBDFA /* Assets.xcassets in Resources */,
 				38B25BA42B8CC61200DDBDFA /* Main.storyboard in Resources */,
@@ -182,8 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				38ADBD452B8DF0B30070E0DF /* addDataViewController.swift in Sources */,
-				38B25BB22B8CC6F900DDBDFA /* addReminderPage.swift in Sources */,
 				38B25BA12B8CC61200DDBDFA /* ViewController.swift in Sources */,
+				38932CE02B8EFFD600F3A7F0 /* TableViewCell.swift in Sources */,
 				38B25B9D2B8CC61100DDBDFA /* AppDelegate.swift in Sources */,
 				38B25B9F2B8CC61200DDBDFA /* SceneDelegate.swift in Sources */,
 			);
