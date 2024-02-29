@@ -92,7 +92,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     private func handleEdit(cell : TableViewCell) {
         let datetimedata = cell.DateAndTimedataLabel.text!
       
-        let taskdata = cell.costumLabel.text!
+        let taskdata = cell.costumLabel.text
         
          let indexPath = ReminderTable.indexPath(for: cell)!
               let row = indexPath.row

@@ -16,6 +16,7 @@ class addDataViewController: UIViewController {
         
   
     let dateTimePicker = UIDatePicker()
+  
     func initializeView(){
         navigationItem.hidesBackButton = true
         EnterCostum.borderStyle = .none
@@ -53,16 +54,28 @@ class addDataViewController: UIViewController {
        
             
             if(!task.isEmpty && !timefortask.isEmpty){
+                guard let dateAndTimeText = EnterDateFiled.text
+                else {
+                    return
+                }
+                guard let TaskText = EnterCostum.text
+                else {
+                    return
+                }
+                if(!dateAndTimeText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !TaskText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty){
+                    var index = Int(ediatIndex)!
+                    print("\(data[index])")
+                    
+                    
+                   let obj = DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum:    EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines))
+                    data[index] =  obj
+                    print("\(data[index])")
+                    USerDataStoreOnLocal.defaults.setdataInDefaults()
+                 
+                    navigationController?.popViewController(animated: true)
+                    }
                
-                var index = Int(ediatIndex)!
-                print("\(data[index])")
-                
-               let obj = DateAndTimeModel(DateAndTimeString:  EnterDateFiled.text!, costum:    EnterCostum.text!)
-                data[index] =  obj
-                print("\(data[index])")
-                USerDataStoreOnLocal.defaults.setdataInDefaults()
-             
-                navigationController?.popViewController(animated: true)
+              
             }
         else {
             guard let dateAndTimeText = EnterDateFiled.text
@@ -74,7 +87,7 @@ class addDataViewController: UIViewController {
                 return
             }
             if(!dateAndTimeText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !TaskText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty){
-                data.append(DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!, costum: EnterCostum.text!))
+                data.append(DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum: EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines)))
                 USerDataStoreOnLocal.defaults.setdataInDefaults()
                 navigationController?.popViewController(animated: true)
                 
@@ -94,15 +107,27 @@ class addDataViewController: UIViewController {
        
         super.viewDidLoad()
         initializeView()
+     
+        
         dateTimePicker.datePickerMode = .dateAndTime
         dateTimePicker.preferredDatePickerStyle = .inline
         EnterDateFiled.inputView = dateTimePicker
         
+        dateTimePicker.backgroundColor = .white
+        let customColor = UIColor(
+            red: CGFloat(108) / 255.0,
+            green: CGFloat(194) / 255.0,
+            blue: CGFloat(181) / 255.0,
+            alpha: 1.0
+        )
+
+        dateTimePicker.tintColor = customColor
         
-        dateTimePicker.frame = CGRect(x: 0, y: 0, width: 0, height: 450)
+        dateTimePicker.frame = CGRect(x: 10, y: 0, width: 20, height: 450)
         let currentDate = NSDate()
         dateTimePicker.minimumDate =  currentDate as Date
-   //     dateTimePicker.setValue(UIColor(cgColor: CGColor(red: 108, green: 194, blue: 181, alpha: 1)), forKey: "textColor")
+     
+        
         
         let toolbar = UIToolbar()
                 toolbar.sizeToFit()
@@ -111,9 +136,11 @@ class addDataViewController: UIViewController {
            
 
                 toolbar.setItems([doneDateButton], animated: true)
-        
-
         EnterDateFiled.inputAccessoryView = toolbar
+      
+        
+ 
+
         
         
         if(!editedDate.isEmpty  &&  !editedDataTask.isEmpty ){
@@ -124,27 +151,13 @@ class addDataViewController: UIViewController {
     
        
        
-//
-//        let stackView = UIStackView(arrangedSubviews: [dateTimePicker, toolbar])
-//                stackView.axis = .vertical
-//                stackView.spacing = 8
-//                stackView.distribution = .fillEqually
-//
-//        EnterDateFiled.inputView = stackView
-//
-//                // Add constraints to ensure the stack view fits within the visible area
-//                stackView.translatesAutoresizingMaskIntoConstraints = false
-//                stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-//                stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-//                stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-//        view.addSubview(dateTimePicker)
-        // Do any additional setup after loading the view.
+
         
         
-      
-        
-       
     }
+    
+    
+    
     override func viewWillAppear(_ animated: Bool) {
        
     }
@@ -153,7 +166,7 @@ class addDataViewController: UIViewController {
            let dateFormatter = DateFormatter()
            dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         EnterDateFiled.text = dateFormatter.string(from: dateTimePicker.date)
-        EnterDateFiled.textColor = .blue
+        
         EnterDateFiled.resignFirstResponder()
        }
 
