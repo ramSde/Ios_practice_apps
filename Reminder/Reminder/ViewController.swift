@@ -6,9 +6,44 @@
 //
 
 import UIKit
-struct DateAndTimeModel{
+struct DateAndTimeModel : Codable{
     var DateAndTimeString : String
     var costum : String
+}
+class USerDataStoreOnLocal{
+    
+    
+    static let defaults = USerDataStoreOnLocal()
+    func getDataFromDefaults() -> [DateAndTimeModel] {
+        
+        if let storedData = UserDefaults.standard.data(forKey: "dataArray") {
+              do {
+                  let decoder = JSONDecoder()
+                  data = try decoder.decode([DateAndTimeModel].self, from: storedData)
+              } catch {
+                  print("Error decoding data: \(error)")
+              }
+          } else {
+              data = []
+          }
+        return data
+    }
+
+    
+   func setdataInDefaults() {
+       do {
+              let encoder = JSONEncoder()
+              let encodedData = try encoder.encode(data)
+              UserDefaults.standard.set(encodedData, forKey: "dataArray")
+          } catch {
+              print("Error encoding data: \(error)")
+          }
+
+    }
+    
+    
+    
+    
 }
  var data : [DateAndTimeModel] = []
 class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,CustomCellDelegate {
@@ -48,15 +83,34 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         // Perform deletion logic
         data.remove(at: indexPath.row)
         ReminderTable.deleteRows(at: [indexPath], with: .automatic)
+        USerDataStoreOnLocal.defaults.setdataInDefaults()
         updateUiOnDataAdd()
         if(data.isEmpty){
             DataisEmptyUI.isHidden = false
         }
       }
     private func handleEdit(cell : TableViewCell) {
-      performSegue(withIdentifier: "mainScreenToAddDataScreen", sender: nil)
+        let datetimedata = cell.DateAndTimedataLabel.text!
+      
+        let taskdata = cell.costumLabel.text!
+        
+         let indexPath = ReminderTable.indexPath(for: cell)!
+              let row = indexPath.row
+         
+          
+      performSegue(withIdentifier: "mainScreenToAddDataScreen", sender: [datetimedata,taskdata,String(row)])
         
         
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "mainScreenToAddDataScreen" {
+        if let addScreenVC = segue.destination as? addDataViewController, let reminder = sender as? [String] {
+            addScreenVC.editedDate = reminder[0]
+            addScreenVC.editedDataTask = reminder[1]
+            addScreenVC.ediatIndex = reminder[2]
+         
+        }
+      }
     }
     
     
@@ -68,6 +122,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell")  as! TableViewCell
         cell.configure(with: data[indexPath.row])
+        cell.selectionStyle = .none
         cell.delegate = self
         return cell
     }
@@ -81,6 +136,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
 
     @IBOutlet weak var ReminderTable: UITableView!
     override func viewDidLoad() {
+     data =   USerDataStoreOnLocal.defaults.getDataFromDefaults()
         EmptyScreenText.layer.cornerRadius = 15
         super.viewDidLoad()
         if(!data.isEmpty){
@@ -109,6 +165,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
         updateUiOnDataAdd()
     }
     func updateUiOnDataAdd(){
+        data = USerDataStoreOnLocal.defaults.getDataFromDefaults()
         DispatchQueue.main.async { [self] in
             ReminderTable.reloadData()
         }

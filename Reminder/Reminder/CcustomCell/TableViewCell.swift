@@ -47,7 +47,7 @@ class TableViewCell: UITableViewCell {
     }
     func configure(with model : DateAndTimeModel){
         
-        DateAndTimedataLabel.text = String(model.DateAndTimeString.prefix(10)) + " at " + String(model.DateAndTimeString.suffix(from: String.Index(utf16Offset: 10, in: model.DateAndTimeString)))
+        DateAndTimedataLabel.text = model.DateAndTimeString
         costumLabel.text = model.costum
         
     }

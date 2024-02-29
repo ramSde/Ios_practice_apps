@@ -8,6 +8,13 @@
 import UIKit
 
 class addDataViewController: UIViewController {
+  
+
+    var editedDataTask : String = ""
+    var editedDate : String = ""
+    var ediatIndex : String = ""
+        
+  
     let dateTimePicker = UIDatePicker()
     func initializeView(){
         navigationItem.hidesBackButton = true
@@ -40,20 +47,48 @@ class addDataViewController: UIViewController {
     
     @IBOutlet weak var EnterDateFiled: UITextField!
     @IBAction func AddNewDataBtn(_ sender: UIButton) {
-        guard let task = EnterCostum.text
+        
+        let   task  = editedDataTask
+          let timefortask = editedDate
+       
+            
+            if(!task.isEmpty && !timefortask.isEmpty){
+               
+                var index = Int(ediatIndex)!
+                print("\(data[index])")
+                
+               let obj = DateAndTimeModel(DateAndTimeString:  EnterDateFiled.text!, costum:    EnterCostum.text!)
+                data[index] =  obj
+                print("\(data[index])")
+                USerDataStoreOnLocal.defaults.setdataInDefaults()
+             
+                navigationController?.popViewController(animated: true)
+            }
         else {
-         
-            return
+            guard let dateAndTimeText = EnterDateFiled.text
+            else {
+                return
+            }
+            guard let TaskText = EnterCostum.text
+            else {
+                return
+            }
+            if(!dateAndTimeText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !TaskText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty){
+                data.append(DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!, costum: EnterCostum.text!))
+                USerDataStoreOnLocal.defaults.setdataInDefaults()
+                navigationController?.popViewController(animated: true)
+                
+            }
+            
+          
+            
         }
-                guard let timefortask = EnterDateFiled.text
-        else {
-                 
-                    return
-                }
-        if(!task.isEmpty && !timefortask.isEmpty){
-            data.append(DateAndTimeModel(DateAndTimeString: timefortask, costum: task))
-            navigationController?.popViewController(animated: true)
-        }
+            
+                    
+            
+            
+        
+    
     }
     override func viewDidLoad() {
        
@@ -65,6 +100,9 @@ class addDataViewController: UIViewController {
         
         
         dateTimePicker.frame = CGRect(x: 0, y: 0, width: 0, height: 450)
+        let currentDate = NSDate()
+        dateTimePicker.minimumDate =  currentDate as Date
+   //     dateTimePicker.setValue(UIColor(cgColor: CGColor(red: 108, green: 194, blue: 181, alpha: 1)), forKey: "textColor")
         
         let toolbar = UIToolbar()
                 toolbar.sizeToFit()
@@ -76,6 +114,15 @@ class addDataViewController: UIViewController {
         
 
         EnterDateFiled.inputAccessoryView = toolbar
+        
+        
+        if(!editedDate.isEmpty  &&  !editedDataTask.isEmpty ){
+            EnterDateFiled.text = editedDate
+            EnterCostum.text = editedDataTask
+        }
+      
+    
+       
        
 //
 //        let stackView = UIStackView(arrangedSubviews: [dateTimePicker, toolbar])
@@ -92,6 +139,14 @@ class addDataViewController: UIViewController {
 //                stackView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
 //        view.addSubview(dateTimePicker)
         // Do any additional setup after loading the view.
+        
+        
+      
+        
+       
+    }
+    override func viewWillAppear(_ animated: Bool) {
+       
     }
     @objc func doneDateButtonPressed() {
            // Format the selected date and update the text field
