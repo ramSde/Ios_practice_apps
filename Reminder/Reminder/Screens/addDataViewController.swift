@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class addDataViewController: UIViewController {
   
@@ -13,7 +14,7 @@ class addDataViewController: UIViewController {
     var editedDataTask : String = ""
     var editedDate : String = ""
     var ediatIndex : String = ""
-        
+    var unique_notification_id = ""
   
     let dateTimePicker = UIDatePicker()
   
@@ -51,51 +52,84 @@ class addDataViewController: UIViewController {
         
         let   task  = editedDataTask
           let timefortask = editedDate
-       
+        guard let dateAndTimeText = EnterDateFiled.text
+        else {
+            return
+        }
+        guard let TaskText = EnterCostum.text
+        else {
+            return
+        }
             
             if(!task.isEmpty && !timefortask.isEmpty){
-                guard let dateAndTimeText = EnterDateFiled.text
-                else {
-                    return
-                }
-                guard let TaskText = EnterCostum.text
-                else {
-                    return
-                }
+              
                 if(!dateAndTimeText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !TaskText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty){
                     var index = Int(ediatIndex)!
                     print("\(data[index])")
                     
                     
-                   let obj = DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum:    EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines))
+                   var obj = DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum:    EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines))
                     data[index] =  obj
                     print("\(data[index])")
                     USerDataStoreOnLocal.defaults.setdataInDefaults()
-                 
+                    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [obj.notifacitonId!])
+                    let content = UNMutableNotificationContent()
+                    content.title = "Reminder: \(TaskText)"
+                         content.body = ": \(TaskText)"
+                         content.sound = UNNotificationSound.default
+                    let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: dateTimePicker.date)
+                         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                    obj.notifacitonId = "_reminder_\(UUID().uuidString)"
+                         let request = UNNotificationRequest(identifier: "\(obj.notifacitonId)", content: content, trigger: trigger)
+                    UNUserNotificationCenter.current().add(request) { (error) in
+                      if let error = error {
+                        print("Failed to schedule notification: \(error.localizedDescription)")
+                      } else {
+                        print("Notification scheduled successfully")
+                      }
+                    }
+
                     navigationController?.popViewController(animated: true)
                     }
                
               
             }
         else {
-            guard let dateAndTimeText = EnterDateFiled.text
-            else {
-                return
-            }
-            guard let TaskText = EnterCostum.text
-            else {
-                return
-            }
+            
             if(!dateAndTimeText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !TaskText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty){
-                data.append(DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum: EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines)))
+                let uniqueID = UUID().uuidString
+                data.append(DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum: EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines),notifacitonId : "_reminder_\(uniqueID)"))
                 USerDataStoreOnLocal.defaults.setdataInDefaults()
+                
+                let content = UNMutableNotificationContent()
+                content.title = "Reminder: \(TaskText)"
+                     content.body = ": \(TaskText)"
+                     content.sound = UNNotificationSound.default
+                let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: dateTimePicker.date)
+                     let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
+                
+                     let request = UNNotificationRequest(identifier: "_reminder_\(uniqueID)", content: content, trigger: trigger)
+                UNUserNotificationCenter.current().add(request) { (error) in
+                  if let error = error {
+                    print("Failed to schedule notification: \(error.localizedDescription)")
+                  } else {
+                    print("Notification scheduled successfully")
+                  }
+                }
+
+                
                 navigationController?.popViewController(animated: true)
+                
+                
+                
                 
             }
             
           
             
         }
+       
+      
             
                     
             
@@ -124,8 +158,8 @@ class addDataViewController: UIViewController {
         dateTimePicker.tintColor = customColor
         
         dateTimePicker.frame = CGRect(x: 10, y: 0, width: 20, height: 450)
-        let currentDate = NSDate()
-        dateTimePicker.minimumDate =  currentDate as Date
+        let currentDate = NSDate() as Date             
+        dateTimePicker.minimumDate =  currentDate
      
         
         

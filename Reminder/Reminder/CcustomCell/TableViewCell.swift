@@ -49,6 +49,7 @@ class TableViewCell: UITableViewCell {
         
         DateAndTimedataLabel.text = model.DateAndTimeString
         costumLabel.text = model.costum
+       
         
     }
     private func setupUI() {

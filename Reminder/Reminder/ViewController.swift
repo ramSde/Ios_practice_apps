@@ -6,10 +6,16 @@
 //
 
 import UIKit
+
+import UserNotifications
+
+
 struct DateAndTimeModel : Codable{
     var DateAndTimeString : String
     var costum : String
+    var notifacitonId : String?
 }
+
 class USerDataStoreOnLocal{
     
     
@@ -81,9 +87,11 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     private func handleDelete(cell: TableViewCell) {
         guard let indexPath = ReminderTable.indexPath(for: cell) else { return }
         // Perform deletion logic
+        let unique_notfy_id  = data[indexPath.row].notifacitonId
         data.remove(at: indexPath.row)
         ReminderTable.deleteRows(at: [indexPath], with: .automatic)
         USerDataStoreOnLocal.defaults.setdataInDefaults()
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["\(unique_notfy_id)"])
         updateUiOnDataAdd()
         if(data.isEmpty){
             DataisEmptyUI.isHidden = false
@@ -97,8 +105,8 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
          let indexPath = ReminderTable.indexPath(for: cell)!
               let row = indexPath.row
          
-          
-      performSegue(withIdentifier: "mainScreenToAddDataScreen", sender: [datetimedata,taskdata,String(row)])
+        let notification_id = data[indexPath.row].notifacitonId
+      performSegue(withIdentifier: "mainScreenToAddDataScreen", sender: [datetimedata,taskdata,String(row),notification_id])
         
         
     }
@@ -108,6 +116,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
             addScreenVC.editedDate = reminder[0]
             addScreenVC.editedDataTask = reminder[1]
             addScreenVC.ediatIndex = reminder[2]
+            addScreenVC.unique_notification_id = reminder[3]
          
         }
       }
@@ -122,6 +131,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell")  as! TableViewCell
         cell.configure(with: data[indexPath.row])
+        
         cell.selectionStyle = .none
         cell.delegate = self
         return cell
