@@ -69,7 +69,7 @@ class addDataViewController: UIViewController {
                     
                     
                    var obj = DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum:    EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines),notifacitonId: data[index].notifacitonId!)
-                    data[index] =  obj
+                    
                     print("\(data[index])")
                     USerDataStoreOnLocal.defaults.setdataInDefaults()
                     UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [data[index].notifacitonId!])
@@ -81,6 +81,7 @@ class addDataViewController: UIViewController {
                          let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
                    
                     obj.notifacitonId = "_reminder_" + UUID().uuidString
+                    data[index] =  obj
                              let request = UNNotificationRequest(identifier: obj.notifacitonId!, content: content, trigger: trigger)
                     UNUserNotificationCenter.current().add(request) { (error) in
                       if let error = error {
