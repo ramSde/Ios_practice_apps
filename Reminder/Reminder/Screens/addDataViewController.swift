@@ -68,19 +68,20 @@ class addDataViewController: UIViewController {
                     print("\(data[index])")
                     
                     
-                   var obj = DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum:    EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines))
+                   var obj = DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum:    EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines),notifacitonId: data[index].notifacitonId!)
                     data[index] =  obj
                     print("\(data[index])")
                     USerDataStoreOnLocal.defaults.setdataInDefaults()
-                    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [obj.notifacitonId!])
+                    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [data[index].notifacitonId!])
                     let content = UNMutableNotificationContent()
                     content.title = "Reminder: \(TaskText)"
                          content.body = ": \(TaskText)"
                          content.sound = UNNotificationSound.default
                     let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: dateTimePicker.date)
                          let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
-                    obj.notifacitonId = "_reminder_\(UUID().uuidString)"
-                         let request = UNNotificationRequest(identifier: "\(obj.notifacitonId)", content: content, trigger: trigger)
+                   
+                    obj.notifacitonId = "_reminder_" + UUID().uuidString
+                             let request = UNNotificationRequest(identifier: obj.notifacitonId!, content: content, trigger: trigger)
                     UNUserNotificationCenter.current().add(request) { (error) in
                       if let error = error {
                         print("Failed to schedule notification: \(error.localizedDescription)")
@@ -97,8 +98,8 @@ class addDataViewController: UIViewController {
         else {
             
             if(!dateAndTimeText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty && !TaskText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty){
-                let uniqueID = UUID().uuidString
-                data.append(DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum: EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines),notifacitonId : "_reminder_\(uniqueID)"))
+                let uniqueID = "_reminder_" + UUID().uuidString
+                data.append(DateAndTimeModel(DateAndTimeString: EnterDateFiled.text!.trimmingCharacters(in: .whitespacesAndNewlines), costum: EnterCostum.text!.trimmingCharacters(in: .whitespacesAndNewlines),notifacitonId : uniqueID))
                 USerDataStoreOnLocal.defaults.setdataInDefaults()
                 
                 let content = UNMutableNotificationContent()
@@ -108,7 +109,7 @@ class addDataViewController: UIViewController {
                 let triggerDate = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute], from: dateTimePicker.date)
                      let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: false)
                 
-                     let request = UNNotificationRequest(identifier: "_reminder_\(uniqueID)", content: content, trigger: trigger)
+                     let request = UNNotificationRequest(identifier: uniqueID, content: content, trigger: trigger)
                 UNUserNotificationCenter.current().add(request) { (error) in
                   if let error = error {
                     print("Failed to schedule notification: \(error.localizedDescription)")
