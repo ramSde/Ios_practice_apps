@@ -22,7 +22,7 @@ class RegisterViewController: UIViewController {
                     print(e)
                 }
                 else{
-                    self.performSegue(withIdentifier: "GoRegisterToChat", sender: nil)
+                    self.performSegue(withIdentifier: constants.registerSegue, sender: nil)
                 }
             }
             
