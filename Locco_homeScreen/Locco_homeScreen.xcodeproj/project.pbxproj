@@ -1,0 +1,561 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38D714BF2B9B0ED900830361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D714BE2B9B0ED900830361 /* AppDelegate.swift */; };
+		38D714C12B9B0ED900830361 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D714C02B9B0ED900830361 /* SceneDelegate.swift */; };
+		38D714C32B9B0ED900830361 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D714C22B9B0ED900830361 /* ViewController.swift */; };
+		38D714C62B9B0ED900830361 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D714C42B9B0ED900830361 /* Main.storyboard */; };
+		38D714CB2B9B0EDA00830361 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38D714C92B9B0EDA00830361 /* LaunchScreen.storyboard */; };
+		38D714EB2B9B10B600830361 /* Metropolis-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714D92B9B10B600830361 /* Metropolis-Bold.otf */; };
+		38D714EC2B9B10B600830361 /* Metropolis-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714DA2B9B10B600830361 /* Metropolis-Thin.otf */; };
+		38D714ED2B9B10B600830361 /* Metropolis-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714DB2B9B10B600830361 /* Metropolis-RegularItalic.otf */; };
+		38D714EE2B9B10B600830361 /* Metropolis-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714DC2B9B10B600830361 /* Metropolis-ExtraBold.otf */; };
+		38D714EF2B9B10B600830361 /* Metropolis-SemiBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714DD2B9B10B600830361 /* Metropolis-SemiBoldItalic.otf */; };
+		38D714F02B9B10B600830361 /* Metropolis-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714DE2B9B10B600830361 /* Metropolis-Light.otf */; };
+		38D714F12B9B10B600830361 /* Metropolis-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714DF2B9B10B600830361 /* Metropolis-Regular.otf */; };
+		38D714F22B9B10B600830361 /* Metropolis-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E02B9B10B600830361 /* Metropolis-Black.otf */; };
+		38D714F32B9B10B600830361 /* Metropolis-ExtraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E12B9B10B600830361 /* Metropolis-ExtraLightItalic.otf */; };
+		38D714F42B9B10B600830361 /* Metropolis-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E22B9B10B600830361 /* Metropolis-Medium.otf */; };
+		38D714F52B9B10B600830361 /* Metropolis-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E32B9B10B600830361 /* Metropolis-BlackItalic.otf */; };
+		38D714F62B9B10B600830361 /* Metropolis-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E42B9B10B600830361 /* Metropolis-ThinItalic.otf */; };
+		38D714F72B9B10B600830361 /* Metropolis-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E52B9B10B600830361 /* Metropolis-ExtraLight.otf */; };
+		38D714F82B9B10B600830361 /* Metropolis-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E62B9B10B600830361 /* Metropolis-MediumItalic.otf */; };
+		38D714F92B9B10B600830361 /* Metropolis-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E72B9B10B600830361 /* Metropolis-LightItalic.otf */; };
+		38D714FA2B9B10B600830361 /* Metropolis-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E82B9B10B600830361 /* Metropolis-SemiBold.otf */; };
+		38D714FB2B9B10B600830361 /* Metropolis-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714E92B9B10B600830361 /* Metropolis-BoldItalic.otf */; };
+		38D714FC2B9B10B600830361 /* Metropolis-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714EA2B9B10B600830361 /* Metropolis-ExtraBoldItalic.otf */; };
+		38D715032B9B110A00830361 /* LondrinaSolid-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714FE2B9B110A00830361 /* LondrinaSolid-Black.ttf */; };
+		38D715042B9B110A00830361 /* LondrinaSolid-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38D714FF2B9B110A00830361 /* LondrinaSolid-Regular.ttf */; };
+		38D715052B9B110A00830361 /* LondrinaSolid-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38D715002B9B110A00830361 /* LondrinaSolid-Thin.ttf */; };
+		38D715062B9B110A00830361 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 38D715012B9B110A00830361 /* OFL.txt */; };
+		38D715072B9B110A00830361 /* LondrinaSolid-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 38D715022B9B110A00830361 /* LondrinaSolid-Light.ttf */; };
+		38D7150F2B9B33FC00830361 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38D7150E2B9B33FC00830361 /* Assets.xcassets */; };
+		ACE5D367EB80D8979730947F /* Pods_Locco_homeScreen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27B0CE09D8AD4623DF90FED3 /* Pods_Locco_homeScreen.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		27B0CE09D8AD4623DF90FED3 /* Pods_Locco_homeScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locco_homeScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D714BB2B9B0ED900830361 /* Locco_homeScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locco_homeScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38D714BE2B9B0ED900830361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		38D714C02B9B0ED900830361 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		38D714C22B9B0ED900830361 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		38D714C52B9B0ED900830361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		38D714CA2B9B0EDA00830361 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		38D714CC2B9B0EDA00830361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D714D92B9B10B600830361 /* Metropolis-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Bold.otf"; sourceTree = "<group>"; };
+		38D714DA2B9B10B600830361 /* Metropolis-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Thin.otf"; sourceTree = "<group>"; };
+		38D714DB2B9B10B600830361 /* Metropolis-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-RegularItalic.otf"; sourceTree = "<group>"; };
+		38D714DC2B9B10B600830361 /* Metropolis-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBold.otf"; sourceTree = "<group>"; };
+		38D714DD2B9B10B600830361 /* Metropolis-SemiBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-SemiBoldItalic.otf"; sourceTree = "<group>"; };
+		38D714DE2B9B10B600830361 /* Metropolis-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Light.otf"; sourceTree = "<group>"; };
+		38D714DF2B9B10B600830361 /* Metropolis-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Regular.otf"; sourceTree = "<group>"; };
+		38D714E02B9B10B600830361 /* Metropolis-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Black.otf"; sourceTree = "<group>"; };
+		38D714E12B9B10B600830361 /* Metropolis-ExtraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraLightItalic.otf"; sourceTree = "<group>"; };
+		38D714E22B9B10B600830361 /* Metropolis-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-Medium.otf"; sourceTree = "<group>"; };
+		38D714E32B9B10B600830361 /* Metropolis-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-BlackItalic.otf"; sourceTree = "<group>"; };
+		38D714E42B9B10B600830361 /* Metropolis-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ThinItalic.otf"; sourceTree = "<group>"; };
+		38D714E52B9B10B600830361 /* Metropolis-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraLight.otf"; sourceTree = "<group>"; };
+		38D714E62B9B10B600830361 /* Metropolis-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-MediumItalic.otf"; sourceTree = "<group>"; };
+		38D714E72B9B10B600830361 /* Metropolis-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-LightItalic.otf"; sourceTree = "<group>"; };
+		38D714E82B9B10B600830361 /* Metropolis-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-SemiBold.otf"; sourceTree = "<group>"; };
+		38D714E92B9B10B600830361 /* Metropolis-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-BoldItalic.otf"; sourceTree = "<group>"; };
+		38D714EA2B9B10B600830361 /* Metropolis-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Metropolis-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		38D714FE2B9B110A00830361 /* LondrinaSolid-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Black.ttf"; sourceTree = "<group>"; };
+		38D714FF2B9B110A00830361 /* LondrinaSolid-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Regular.ttf"; sourceTree = "<group>"; };
+		38D715002B9B110A00830361 /* LondrinaSolid-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Thin.ttf"; sourceTree = "<group>"; };
+		38D715012B9B110A00830361 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		38D715022B9B110A00830361 /* LondrinaSolid-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Light.ttf"; sourceTree = "<group>"; };
+		38D7150E2B9B33FC00830361 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3C1ECF4B62FA65097DA2996E /* Pods-Locco_homeScreen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locco_homeScreen.release.xcconfig"; path = "Target Support Files/Pods-Locco_homeScreen/Pods-Locco_homeScreen.release.xcconfig"; sourceTree = "<group>"; };
+		9038840E0DEB2D8495BEE02F /* Pods-Locco_homeScreen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Locco_homeScreen.debug.xcconfig"; path = "Target Support Files/Pods-Locco_homeScreen/Pods-Locco_homeScreen.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38D714B82B9B0ED900830361 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACE5D367EB80D8979730947F /* Pods_Locco_homeScreen.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2F0E575A8F95F756C1D28ECA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9038840E0DEB2D8495BEE02F /* Pods-Locco_homeScreen.debug.xcconfig */,
+				3C1ECF4B62FA65097DA2996E /* Pods-Locco_homeScreen.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		38D714B22B9B0ED900830361 = {
+			isa = PBXGroup;
+			children = (
+				38D714BD2B9B0ED900830361 /* Locco_homeScreen */,
+				38D714BC2B9B0ED900830361 /* Products */,
+				2F0E575A8F95F756C1D28ECA /* Pods */,
+				7157765828ADDCBB774CD12B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		38D714BC2B9B0ED900830361 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38D714BB2B9B0ED900830361 /* Locco_homeScreen.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38D714BD2B9B0ED900830361 /* Locco_homeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				38D714D52B9B0F1900830361 /* Controller */,
+				38D714D42B9B0F0500830361 /* Resources */,
+				38D714D32B9B0EF300830361 /* Views */,
+				38D714BE2B9B0ED900830361 /* AppDelegate.swift */,
+				38D714C02B9B0ED900830361 /* SceneDelegate.swift */,
+				38D714C92B9B0EDA00830361 /* LaunchScreen.storyboard */,
+				38D714CC2B9B0EDA00830361 /* Info.plist */,
+			);
+			path = Locco_homeScreen;
+			sourceTree = "<group>";
+		};
+		38D714D32B9B0EF300830361 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38D714C42B9B0ED900830361 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		38D714D42B9B0F0500830361 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				38D7150E2B9B33FC00830361 /* Assets.xcassets */,
+				38D714D72B9B0F4300830361 /* Constanst */,
+				38D714D62B9B0F3800830361 /* Font */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		38D714D52B9B0F1900830361 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				38D714C22B9B0ED900830361 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		38D714D62B9B0F3800830361 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				38D714FD2B9B110A00830361 /* Londrina_Solid */,
+				38D714D82B9B10B600830361 /* Metropolis Font family */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		38D714D72B9B0F4300830361 /* Constanst */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constanst;
+			sourceTree = "<group>";
+		};
+		38D714D82B9B10B600830361 /* Metropolis Font family */ = {
+			isa = PBXGroup;
+			children = (
+				38D714D92B9B10B600830361 /* Metropolis-Bold.otf */,
+				38D714DA2B9B10B600830361 /* Metropolis-Thin.otf */,
+				38D714DB2B9B10B600830361 /* Metropolis-RegularItalic.otf */,
+				38D714DC2B9B10B600830361 /* Metropolis-ExtraBold.otf */,
+				38D714DD2B9B10B600830361 /* Metropolis-SemiBoldItalic.otf */,
+				38D714DE2B9B10B600830361 /* Metropolis-Light.otf */,
+				38D714DF2B9B10B600830361 /* Metropolis-Regular.otf */,
+				38D714E02B9B10B600830361 /* Metropolis-Black.otf */,
+				38D714E12B9B10B600830361 /* Metropolis-ExtraLightItalic.otf */,
+				38D714E22B9B10B600830361 /* Metropolis-Medium.otf */,
+				38D714E32B9B10B600830361 /* Metropolis-BlackItalic.otf */,
+				38D714E42B9B10B600830361 /* Metropolis-ThinItalic.otf */,
+				38D714E52B9B10B600830361 /* Metropolis-ExtraLight.otf */,
+				38D714E62B9B10B600830361 /* Metropolis-MediumItalic.otf */,
+				38D714E72B9B10B600830361 /* Metropolis-LightItalic.otf */,
+				38D714E82B9B10B600830361 /* Metropolis-SemiBold.otf */,
+				38D714E92B9B10B600830361 /* Metropolis-BoldItalic.otf */,
+				38D714EA2B9B10B600830361 /* Metropolis-ExtraBoldItalic.otf */,
+			);
+			path = "Metropolis Font family";
+			sourceTree = "<group>";
+		};
+		38D714FD2B9B110A00830361 /* Londrina_Solid */ = {
+			isa = PBXGroup;
+			children = (
+				38D714FE2B9B110A00830361 /* LondrinaSolid-Black.ttf */,
+				38D714FF2B9B110A00830361 /* LondrinaSolid-Regular.ttf */,
+				38D715002B9B110A00830361 /* LondrinaSolid-Thin.ttf */,
+				38D715012B9B110A00830361 /* OFL.txt */,
+				38D715022B9B110A00830361 /* LondrinaSolid-Light.ttf */,
+			);
+			path = Londrina_Solid;
+			sourceTree = "<group>";
+		};
+		7157765828ADDCBB774CD12B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				27B0CE09D8AD4623DF90FED3 /* Pods_Locco_homeScreen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38D714BA2B9B0ED900830361 /* Locco_homeScreen */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38D714CF2B9B0EDA00830361 /* Build configuration list for PBXNativeTarget "Locco_homeScreen" */;
+			buildPhases = (
+				26FA8FFA82FC3AD96F6B7F5A /* [CP] Check Pods Manifest.lock */,
+				38D714B72B9B0ED900830361 /* Sources */,
+				38D714B82B9B0ED900830361 /* Frameworks */,
+				38D714B92B9B0ED900830361 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Locco_homeScreen;
+			productName = Locco_homeScreen;
+			productReference = 38D714BB2B9B0ED900830361 /* Locco_homeScreen.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38D714B32B9B0ED900830361 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					38D714BA2B9B0ED900830361 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 38D714B62B9B0ED900830361 /* Build configuration list for PBXProject "Locco_homeScreen" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 38D714B22B9B0ED900830361;
+			productRefGroup = 38D714BC2B9B0ED900830361 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38D714BA2B9B0ED900830361 /* Locco_homeScreen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38D714B92B9B0ED900830361 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D714F62B9B10B600830361 /* Metropolis-ThinItalic.otf in Resources */,
+				38D714F42B9B10B600830361 /* Metropolis-Medium.otf in Resources */,
+				38D714F22B9B10B600830361 /* Metropolis-Black.otf in Resources */,
+				38D714F12B9B10B600830361 /* Metropolis-Regular.otf in Resources */,
+				38D714F52B9B10B600830361 /* Metropolis-BlackItalic.otf in Resources */,
+				38D714F02B9B10B600830361 /* Metropolis-Light.otf in Resources */,
+				38D714EC2B9B10B600830361 /* Metropolis-Thin.otf in Resources */,
+				38D714F82B9B10B600830361 /* Metropolis-MediumItalic.otf in Resources */,
+				38D714F72B9B10B600830361 /* Metropolis-ExtraLight.otf in Resources */,
+				38D714EE2B9B10B600830361 /* Metropolis-ExtraBold.otf in Resources */,
+				38D715072B9B110A00830361 /* LondrinaSolid-Light.ttf in Resources */,
+				38D714FB2B9B10B600830361 /* Metropolis-BoldItalic.otf in Resources */,
+				38D714CB2B9B0EDA00830361 /* LaunchScreen.storyboard in Resources */,
+				38D714ED2B9B10B600830361 /* Metropolis-RegularItalic.otf in Resources */,
+				38D715032B9B110A00830361 /* LondrinaSolid-Black.ttf in Resources */,
+				38D714FC2B9B10B600830361 /* Metropolis-ExtraBoldItalic.otf in Resources */,
+				38D715062B9B110A00830361 /* OFL.txt in Resources */,
+				38D714EF2B9B10B600830361 /* Metropolis-SemiBoldItalic.otf in Resources */,
+				38D714FA2B9B10B600830361 /* Metropolis-SemiBold.otf in Resources */,
+				38D714EB2B9B10B600830361 /* Metropolis-Bold.otf in Resources */,
+				38D714C62B9B0ED900830361 /* Main.storyboard in Resources */,
+				38D715052B9B110A00830361 /* LondrinaSolid-Thin.ttf in Resources */,
+				38D714F92B9B10B600830361 /* Metropolis-LightItalic.otf in Resources */,
+				38D7150F2B9B33FC00830361 /* Assets.xcassets in Resources */,
+				38D715042B9B110A00830361 /* LondrinaSolid-Regular.ttf in Resources */,
+				38D714F32B9B10B600830361 /* Metropolis-ExtraLightItalic.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		26FA8FFA82FC3AD96F6B7F5A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Locco_homeScreen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38D714B72B9B0ED900830361 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38D714C32B9B0ED900830361 /* ViewController.swift in Sources */,
+				38D714BF2B9B0ED900830361 /* AppDelegate.swift in Sources */,
+				38D714C12B9B0ED900830361 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		38D714C42B9B0ED900830361 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38D714C52B9B0ED900830361 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		38D714C92B9B0EDA00830361 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38D714CA2B9B0EDA00830361 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38D714CD2B9B0EDA00830361 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		38D714CE2B9B0EDA00830361 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		38D714D02B9B0EDA00830361 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9038840E0DEB2D8495BEE02F /* Pods-Locco_homeScreen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Locco_homeScreen/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zignuts.Locco-homeScreen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		38D714D12B9B0EDA00830361 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C1ECF4B62FA65097DA2996E /* Pods-Locco_homeScreen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Locco_homeScreen/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zignuts.Locco-homeScreen";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38D714B62B9B0ED900830361 /* Build configuration list for PBXProject "Locco_homeScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D714CD2B9B0EDA00830361 /* Debug */,
+				38D714CE2B9B0EDA00830361 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38D714CF2B9B0EDA00830361 /* Build configuration list for PBXNativeTarget "Locco_homeScreen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38D714D02B9B0EDA00830361 /* Debug */,
+				38D714D12B9B0EDA00830361 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38D714B32B9B0ED900830361 /* Project object */;
+}

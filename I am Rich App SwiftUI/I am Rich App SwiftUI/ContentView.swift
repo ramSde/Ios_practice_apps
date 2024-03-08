@@ -9,14 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        ScrollView{
+            ZStack{
+               
+                Color(.red)
+             
+                
+                VStack{
+                    
+                    Spacer(minLength: 400)
+                    Text("Hello world").font(.system(size: 90)).fontWeight(.bold)
+                    Image(systemName: "book")
+                        .frame(height:200)
+                        .foregroundColor(.accentColor).padding(30)
+                    Text("Hello, world!")
+                    
+                }
+                
+                
+            }
         }
-        .padding()
-    }
+        }
+        
 }
 
 struct ContentView_Previews: PreviewProvider {

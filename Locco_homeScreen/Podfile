@@ -1,0 +1,11 @@
+
+ platform :ios, '13.0'
+
+target 'Locco_homeScreen' do
+  
+  use_frameworks!
+  
+
+
+
+end

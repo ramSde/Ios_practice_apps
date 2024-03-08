@@ -1,0 +1,13 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '13.0'
+
+target 'TodoAppUsingSwiftUI' do
+  
+  use_frameworks!
+  pod 'FirebaseCore', '~> 10.22'
+  pod 'FirebaseAuth', '~> 10.22'
+  pod 'FirebaseFirestore', '~> 10.22'
+  # Pods for TodoAppUsingSwiftUI
+  
+
+end

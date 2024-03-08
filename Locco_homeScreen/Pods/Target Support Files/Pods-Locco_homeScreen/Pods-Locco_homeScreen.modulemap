@@ -1,0 +1,6 @@
+framework module Pods_Locco_homeScreen {
+  umbrella header "Pods-Locco_homeScreen-umbrella.h"
+
+  export *
+  module * { export * }
+}
