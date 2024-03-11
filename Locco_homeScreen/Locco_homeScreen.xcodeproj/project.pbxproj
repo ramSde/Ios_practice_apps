@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3868DE3E2B9F06DD00C4AED6 /* User.png in Resources */ = {isa = PBXBuildFile; fileRef = 3868DD5A2B9F06C700C4AED6 /* User.png */; };
+		3868DE3F2B9F06DD00C4AED6 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3868DD5B2B9F06C700C4AED6 /* Contents.json */; };
+		3868DE402B9F06DD00C4AED6 /* User@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3868DD5C2B9F06C700C4AED6 /* User@3x.png */; };
+		3868DE412B9F06DD00C4AED6 /* User@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3868DD5D2B9F06C700C4AED6 /* User@2x.png */; };
+		3868DEE42B9F0BA300C4AED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3868DEE22B9F0BA300C4AED6 /* Assets.xcassets */; };
 		38D714BF2B9B0ED900830361 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D714BE2B9B0ED900830361 /* AppDelegate.swift */; };
 		38D714C12B9B0ED900830361 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D714C02B9B0ED900830361 /* SceneDelegate.swift */; };
 		38D714C32B9B0ED900830361 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D714C22B9B0ED900830361 /* ViewController.swift */; };
@@ -41,6 +46,11 @@
 
 /* Begin PBXFileReference section */
 		27B0CE09D8AD4623DF90FED3 /* Pods_Locco_homeScreen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Locco_homeScreen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3868DD5A2B9F06C700C4AED6 /* User.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = User.png; sourceTree = "<group>"; };
+		3868DD5B2B9F06C700C4AED6 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		3868DD5C2B9F06C700C4AED6 /* User@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User@3x.png"; sourceTree = "<group>"; };
+		3868DD5D2B9F06C700C4AED6 /* User@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "User@2x.png"; sourceTree = "<group>"; };
+		3868DEE22B9F0BA300C4AED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38D714BB2B9B0ED900830361 /* Locco_homeScreen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Locco_homeScreen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38D714BE2B9B0ED900830361 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38D714C02B9B0ED900830361 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +107,17 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3868DD592B9F06C700C4AED6 /* UserLogo.imageset 14-59-21-528.imageset */ = {
+			isa = PBXGroup;
+			children = (
+				3868DD5A2B9F06C700C4AED6 /* User.png */,
+				3868DD5B2B9F06C700C4AED6 /* Contents.json */,
+				3868DD5C2B9F06C700C4AED6 /* User@3x.png */,
+				3868DD5D2B9F06C700C4AED6 /* User@2x.png */,
+			);
+			path = "UserLogo.imageset 14-59-21-528.imageset";
+			sourceTree = "<group>";
+		};
 		38D714B22B9B0ED900830361 = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +145,7 @@
 				38D714BE2B9B0ED900830361 /* AppDelegate.swift */,
 				38D714C02B9B0ED900830361 /* SceneDelegate.swift */,
 				38D714C92B9B0EDA00830361 /* LaunchScreen.storyboard */,
+				3868DD592B9F06C700C4AED6 /* UserLogo.imageset 14-59-21-528.imageset */,
 				38D714CC2B9B0EDA00830361 /* Info.plist */,
 			);
 			path = Locco_homeScreen;
@@ -140,6 +162,7 @@
 		38D714D42B9B0F0500830361 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3868DEE22B9F0BA300C4AED6 /* Assets.xcassets */,
 				38D7150E2B9B33FC00830361 /* Assets.xcassets */,
 				38D714D72B9B0F4300830361 /* Constanst */,
 				38D714D62B9B0F3800830361 /* Font */,
@@ -282,10 +305,13 @@
 				38D714F52B9B10B600830361 /* Metropolis-BlackItalic.otf in Resources */,
 				38D714F02B9B10B600830361 /* Metropolis-Light.otf in Resources */,
 				38D714EC2B9B10B600830361 /* Metropolis-Thin.otf in Resources */,
+				3868DEE42B9F0BA300C4AED6 /* Assets.xcassets in Resources */,
 				38D714F82B9B10B600830361 /* Metropolis-MediumItalic.otf in Resources */,
 				38D714F72B9B10B600830361 /* Metropolis-ExtraLight.otf in Resources */,
+				3868DE412B9F06DD00C4AED6 /* User@2x.png in Resources */,
 				38D714EE2B9B10B600830361 /* Metropolis-ExtraBold.otf in Resources */,
 				38D715072B9B110A00830361 /* LondrinaSolid-Light.ttf in Resources */,
+				3868DE3E2B9F06DD00C4AED6 /* User.png in Resources */,
 				38D714FB2B9B10B600830361 /* Metropolis-BoldItalic.otf in Resources */,
 				38D714CB2B9B0EDA00830361 /* LaunchScreen.storyboard in Resources */,
 				38D714ED2B9B10B600830361 /* Metropolis-RegularItalic.otf in Resources */,
@@ -293,12 +319,14 @@
 				38D714FC2B9B10B600830361 /* Metropolis-ExtraBoldItalic.otf in Resources */,
 				38D715062B9B110A00830361 /* OFL.txt in Resources */,
 				38D714EF2B9B10B600830361 /* Metropolis-SemiBoldItalic.otf in Resources */,
+				3868DE402B9F06DD00C4AED6 /* User@3x.png in Resources */,
 				38D714FA2B9B10B600830361 /* Metropolis-SemiBold.otf in Resources */,
 				38D714EB2B9B10B600830361 /* Metropolis-Bold.otf in Resources */,
 				38D714C62B9B0ED900830361 /* Main.storyboard in Resources */,
 				38D715052B9B110A00830361 /* LondrinaSolid-Thin.ttf in Resources */,
 				38D714F92B9B10B600830361 /* Metropolis-LightItalic.otf in Resources */,
 				38D7150F2B9B33FC00830361 /* Assets.xcassets in Resources */,
+				3868DE3F2B9F06DD00C4AED6 /* Contents.json in Resources */,
 				38D715042B9B110A00830361 /* LondrinaSolid-Regular.ttf in Resources */,
 				38D714F32B9B10B600830361 /* Metropolis-ExtraLightItalic.otf in Resources */,
 			);
