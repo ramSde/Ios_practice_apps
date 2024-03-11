@@ -13,17 +13,36 @@ class ViewController: UIViewController {
     @IBOutlet weak var SliderImage : UIImageView!
     @IBOutlet weak var SliderText : UILabel!
     
+    @IBOutlet weak var addReminderView: UIView!
+    @IBOutlet weak var changeToDarkOrLightModeView: UIView!
     @IBOutlet weak var ArrowImageinSlider: UIImageView!
     
-      override func viewDidLoad() {
+    @IBOutlet weak var RoutesView: UIView!
+    @IBOutlet weak var latestDisvoriesView: UIView!
+    @IBOutlet weak var spotLightView: UIView!
+    override func viewDidLoad() {
         super.viewDidLoad()
-   
-      
-        customSlider.layer.cornerRadius = customSlider.frame.size.height/4
+   setupSlider()
+        setupviews()
+    
+
+    }
+    func setupviews(){
+        changeToDarkOrLightModeView.layer.cornerRadius = changeToDarkOrLightModeView.frame.size.height * 0.12
+        RoutesView.layer.cornerRadius = RoutesView.frame.size.height * 0.12
+        latestDisvoriesView.layer.cornerRadius = latestDisvoriesView.frame.size.height * 0.12
+        spotLightView.layer.cornerRadius = spotLightView.frame.size.height * 0.08
+        addReminderView.layer.cornerRadius = addReminderView.frame.size.height * 0.09
+
+    }
+    
+    func setupSlider(){
+        customSlider.layer.cornerRadius = customSlider.frame.size.height * 0.40
         let gestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(touched(_:)))
         SliderImage.addGestureRecognizer(gestureRecognizer)
         SliderImage.isUserInteractionEnabled = true
-
+        
+        
     }
     @objc private func touched(_ gestureRecognizer: UIGestureRecognizer) {
           if let touchedView = gestureRecognizer.view {
@@ -36,8 +55,8 @@ class ViewController: UIViewController {
                   // limit the scrolls to the edges of the parent view
                   if newPos < 10 {
                       newPos = 0
-                  } else if newPos > customSlider.frame.size.width/1.420 {
-                      newPos = customSlider.frame.size.width/1.420
+                  } else if newPos > customSlider.frame.size.width/1.55 {
+                      newPos = customSlider.frame.size.width/1.47
                   }
 
                   touchedView.frame.origin.x = newPos
