@@ -36,6 +36,14 @@
 		3868DF372B9F172400C4AED6 /* LondrinaSolid-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868DF202B9F172400C4AED6 /* LondrinaSolid-Thin.ttf */; };
 		3868DF382B9F172400C4AED6 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3868DF212B9F172400C4AED6 /* OFL.txt */; };
 		3868DF392B9F172400C4AED6 /* LondrinaSolid-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3868DF222B9F172400C4AED6 /* LondrinaSolid-Light.ttf */; };
+		38787D152BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38787D132BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.swift */; };
+		38787D162BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38787D142BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.xib */; };
+		38787D192BA01FF40039C4C7 /* StatasticCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38787D172BA01FF40039C4C7 /* StatasticCollectionViewCell.swift */; };
+		38787D1A2BA01FF40039C4C7 /* StatasticCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38787D182BA01FF40039C4C7 /* StatasticCollectionViewCell.xib */; };
+		38787D1D2BA023060039C4C7 /* NavigationMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38787D1B2BA023060039C4C7 /* NavigationMenuTableViewCell.swift */; };
+		38787D1E2BA023060039C4C7 /* NavigationMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38787D1C2BA023060039C4C7 /* NavigationMenuTableViewCell.xib */; };
+		38787D202BA025070039C4C7 /* initialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38787D1F2BA025070039C4C7 /* initialViewController.swift */; };
+		38787D222BA025330039C4C7 /* NavigationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38787D212BA025330039C4C7 /* NavigationPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +78,14 @@
 		3868DF202B9F172400C4AED6 /* LondrinaSolid-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Thin.ttf"; sourceTree = "<group>"; };
 		3868DF212B9F172400C4AED6 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		3868DF222B9F172400C4AED6 /* LondrinaSolid-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LondrinaSolid-Light.ttf"; sourceTree = "<group>"; };
+		38787D132BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellForDiscoverisCollectionViewCell.swift; sourceTree = "<group>"; };
+		38787D142BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCellForDiscoverisCollectionViewCell.xib; sourceTree = "<group>"; };
+		38787D172BA01FF40039C4C7 /* StatasticCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatasticCollectionViewCell.swift; sourceTree = "<group>"; };
+		38787D182BA01FF40039C4C7 /* StatasticCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StatasticCollectionViewCell.xib; sourceTree = "<group>"; };
+		38787D1B2BA023060039C4C7 /* NavigationMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationMenuTableViewCell.swift; sourceTree = "<group>"; };
+		38787D1C2BA023060039C4C7 /* NavigationMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NavigationMenuTableViewCell.xib; sourceTree = "<group>"; };
+		38787D1F2BA025070039C4C7 /* initialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialViewController.swift; sourceTree = "<group>"; };
+		38787D212BA025330039C4C7 /* NavigationPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +123,6 @@
 				3868DF062B9F0D6600C4AED6 /* Controller */,
 				3868DEF12B9F0D4F00C4AED6 /* AppDelegate.swift */,
 				3868DEF32B9F0D4F00C4AED6 /* SceneDelegate.swift */,
-				3868DEF52B9F0D4F00C4AED6 /* ViewController.swift */,
 				3868DEFC2B9F0D5100C4AED6 /* LaunchScreen.storyboard */,
 				3868DEFF2B9F0D5100C4AED6 /* Info.plist */,
 			);
@@ -117,6 +132,9 @@
 		3868DF062B9F0D6600C4AED6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3868DEF52B9F0D4F00C4AED6 /* ViewController.swift */,
+				38787D1F2BA025070039C4C7 /* initialViewController.swift */,
+				38787D212BA025330039C4C7 /* NavigationPageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -125,6 +143,12 @@
 			isa = PBXGroup;
 			children = (
 				3868DEF72B9F0D4F00C4AED6 /* Main.storyboard */,
+				38787D1B2BA023060039C4C7 /* NavigationMenuTableViewCell.swift */,
+				38787D1C2BA023060039C4C7 /* NavigationMenuTableViewCell.xib */,
+				38787D132BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.swift */,
+				38787D142BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.xib */,
+				38787D172BA01FF40039C4C7 /* StatasticCollectionViewCell.swift */,
+				38787D182BA01FF40039C4C7 /* StatasticCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,10 +273,12 @@
 				3868DF2D2B9F172400C4AED6 /* Metropolis-BlackItalic.otf in Resources */,
 				3868DF282B9F172400C4AED6 /* Metropolis-Light.otf in Resources */,
 				3868DF242B9F172400C4AED6 /* Metropolis-Thin.otf in Resources */,
+				38787D1A2BA01FF40039C4C7 /* StatasticCollectionViewCell.xib in Resources */,
 				3868DF302B9F172400C4AED6 /* Metropolis-MediumItalic.otf in Resources */,
 				3868DF2F2B9F172400C4AED6 /* Metropolis-ExtraLight.otf in Resources */,
 				3868DF262B9F172400C4AED6 /* Metropolis-ExtraBold.otf in Resources */,
 				3868DF392B9F172400C4AED6 /* LondrinaSolid-Light.ttf in Resources */,
+				38787D162BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.xib in Resources */,
 				3868DF332B9F172400C4AED6 /* Metropolis-BoldItalic.otf in Resources */,
 				3868DEFE2B9F0D5100C4AED6 /* LaunchScreen.storyboard in Resources */,
 				3868DF252B9F172400C4AED6 /* Metropolis-RegularItalic.otf in Resources */,
@@ -268,6 +294,7 @@
 				3868DF312B9F172400C4AED6 /* Metropolis-LightItalic.otf in Resources */,
 				3868DF362B9F172400C4AED6 /* LondrinaSolid-Regular.ttf in Resources */,
 				3868DF2B2B9F172400C4AED6 /* Metropolis-ExtraLightItalic.otf in Resources */,
+				38787D1E2BA023060039C4C7 /* NavigationMenuTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,8 +305,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38787D1D2BA023060039C4C7 /* NavigationMenuTableViewCell.swift in Sources */,
+				38787D202BA025070039C4C7 /* initialViewController.swift in Sources */,
+				38787D192BA01FF40039C4C7 /* StatasticCollectionViewCell.swift in Sources */,
 				3868DEF62B9F0D4F00C4AED6 /* ViewController.swift in Sources */,
 				3868DEF22B9F0D4F00C4AED6 /* AppDelegate.swift in Sources */,
+				38787D222BA025330039C4C7 /* NavigationPageViewController.swift in Sources */,
+				38787D152BA01A1E0039C4C7 /* CollectionViewCellForDiscoverisCollectionViewCell.swift in Sources */,
 				3868DEF42B9F0D4F00C4AED6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
