@@ -10,10 +10,12 @@ import UIKit
 class NavigationMenuTableViewCell: UITableViewCell {
     @IBOutlet weak var perfixIconImage: UIImageView!
     
+    @IBOutlet weak var DividerImage: UIImageView!
     @IBOutlet weak var cellOFtable: UIView!
     @IBOutlet weak var NavigationPageLabelText: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 

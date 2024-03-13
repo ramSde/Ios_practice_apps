@@ -17,7 +17,7 @@ class initialViewController: UIViewController,UICollectionViewDelegate,UICollect
 
     @IBOutlet weak var RoutesView: UIView!
     @IBOutlet weak var latestDisvoriesView: UIView!
-    @IBOutlet weak var spotLightView: UIView!
+    @IBOutlet weak var spotLightView: UIStackView!
 
     @IBOutlet weak var DiscoveriesCollectionView : UICollectionView!
   
@@ -36,7 +36,8 @@ class initialViewController: UIViewController,UICollectionViewDelegate,UICollect
 
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+      setupviews()
+        setupDiscoverisCollectionView()
         
  
     }

@@ -14,10 +14,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var SliderImage : UIImageView!
     @IBOutlet weak var SliderText : UILabel!
     @IBOutlet weak var ArrowImageinSlider: UIImageView!
-    
+        @IBOutlet weak var secondView: UIView!
     override func viewDidLoad() {
            super.viewDidLoad()
-        firstView.isHidden = true
+        firstView.isHidden = false
+        secondView.isHidden = true
         setupSlider()
    }
     

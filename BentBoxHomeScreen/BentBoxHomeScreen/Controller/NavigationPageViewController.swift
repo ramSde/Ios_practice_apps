@@ -18,7 +18,7 @@ struct navigationModel {
     let navigationPageLabel : String
 }
 
-class NavigationPageViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource {
+class NavigationPageViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var navigationSectionTableView : UITableView!
     @IBOutlet weak var statasticCollectionView : UICollectionView!
@@ -39,6 +39,11 @@ class NavigationPageViewController: UIViewController,UICollectionViewDelegate,UI
         cell.statasticLabel.text = statsData[indexPath.section].Statslabel
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSizeMake(collectionView.bounds.width/4, collectionView.bounds.height)
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
@@ -68,25 +73,51 @@ class NavigationPageViewController: UIViewController,UICollectionViewDelegate,UI
         
         switch indexPath.section {
                case 0:
-         
-
+            
+            if indexPath.row < 2 {
+                      cell.DividerImage.isHidden = false
+                  } else {
+                      cell.DividerImage.isHidden = true
+                  }
                    cell.NavigationPageLabelText.text = navigationPagesData[indexPath.row].navigationPageLabel
                    cell.perfixIconImage.image = UIImage(named: navigationPagesData[indexPath.row].prefixIcon)
-                           case 1:
+                    
+        case 1:
                    cell.NavigationPageLabelText.text = navigationPagesData[3].navigationPageLabel // Assuming you want data from the fourth element for the second section
                    cell.perfixIconImage.image = UIImage(named: navigationPagesData[3].prefixIcon)
+            cell.DividerImage.isHidden = true
                    
-               case 2:
+             
+        case 2:
                    cell.NavigationPageLabelText.text = navigationPagesData[indexPath.row + 4].navigationPageLabel // Assuming you want data starting from the fifth element for the third section
                    cell.perfixIconImage.image = UIImage(named: navigationPagesData[indexPath.row + 4].prefixIcon)
-           
+            if indexPath.row < 2 {
+                        cell.DividerImage.isHidden = false
+                    } else {
+                        cell.DividerImage.isHidden = true
+                    }
                default:
                    break
                }
+        
+        let totalRowsInSection = tableView.numberOfRows(inSection: indexPath.section)
+        if(indexPath.section == 1) {
+            cell.cellOFtable.roundCorners(corners: [.topLeft, .topRight,.bottomLeft,.bottomRight], radius:  cell.cellOFtable.frame.size.height*0.25)
+            
+        }
+      else    if indexPath.row == 0 {
+              cell.cellOFtable.roundCorners(corners: [.topLeft, .topRight], radius:  cell.cellOFtable.frame.size.height*0.25) // Adjust the radius as needed
+          } else if indexPath.row == totalRowsInSection - 1 {
+              cell.cellOFtable.roundCorners(corners: [.bottomLeft, .bottomRight], radius:  cell.cellOFtable.frame.size.height*0.25) // Adjust the radius as needed
+          } else {
+              // Reset the corner radius for cells in the middle of the section
+              cell.cellOFtable.roundCorners(corners: [], radius: 0.0)
+          }
      
         return cell
         
     }
+    
    
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -99,14 +130,17 @@ class NavigationPageViewController: UIViewController,UICollectionViewDelegate,UI
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return " "
     }
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
-        {
-            let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
-            
-                headerView.backgroundColor = UIColor.clear
-            
-            return headerView
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+ 
+       
+               cell.separatorInset = UIEdgeInsets(top: .zero, left: .zero, bottom: .zero, right: .zero  )
+         
+        
+       
         }
+    
+        
+    
     
    
 
@@ -136,6 +170,7 @@ class NavigationPageViewController: UIViewController,UICollectionViewDelegate,UI
     }
     func setuptableView() {
         navigationSectionTableView.separatorColor = UIColor(named: "AppThemeColor")
+        
 
         navigationSectionTableView.delegate = self
         navigationSectionTableView.dataSource = self
@@ -145,6 +180,7 @@ class NavigationPageViewController: UIViewController,UICollectionViewDelegate,UI
             self.navigationSectionTableView.reloadData()
         }
     }
+   
     
 
     /*
