@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var Menubtn: UIButton!
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var customSlider : UIView!
     @IBOutlet weak var SliderImage : UIImageView!
@@ -19,6 +20,8 @@ class ViewController: UIViewController {
            super.viewDidLoad()
         firstView.isHidden = false
         secondView.isHidden = true
+      
+        Menubtn.setImage(UIImage(named: "Menu"), for: .normal)
         setupSlider()
    }
     
@@ -65,6 +68,22 @@ class ViewController: UIViewController {
       }
     
     
+    @IBAction func MenuButtonPress(_ sender: UIButton) {
+        if firstView.isHidden {
+               firstView.isHidden = false
+               secondView.isHidden = true
+            
+
+            Menubtn.setImage(UIImage(named: "Menu"), for: .normal)
+           } else {
+               firstView.isHidden = true
+               secondView.isHidden = false
+               Menubtn.setImage(UIImage(named: "SquaresFour"), for: .normal)
+                    
+
+              
+           }
+    }
     
     
     
@@ -73,4 +92,19 @@ class ViewController: UIViewController {
 
 
 }
+
+extension UIView {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(
+            roundedRect: bounds,
+            byRoundingCorners: corners,
+            cornerRadii: CGSize(width: radius, height: radius)
+        )
+
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        layer.mask = mask
+    }
+}
+
 
