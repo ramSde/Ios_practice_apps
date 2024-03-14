@@ -9,6 +9,13 @@ import Foundation
 
 
 struct ToDo{
+    let id: String
     let task : String
-    let taskDate : String
+    let dueDate : TimeInterval
+    let currentDate:TimeInterval
+    var isdone : Bool
+    
+    mutating func setdone(_ state : Bool){
+        isdone = state
+    }
 }

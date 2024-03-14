@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		382390622BA2BEF1009552D8 /* HeaderViewLoginPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382390612BA2BEF0009552D8 /* HeaderViewLoginPage.swift */; };
+		382390642BA2D567009552D8 /* CustomLRButn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382390632BA2D567009552D8 /* CustomLRButn.swift */; };
+		382390662BA2F373009552D8 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382390652BA2F373009552D8 /* UserModel.swift */; };
 		38472AD42B9AE3FE00D37565 /* TodoAppUsingSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38472AD32B9AE3FE00D37565 /* TodoAppUsingSwiftUIApp.swift */; };
 		38472AD82B9AE3FF00D37565 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38472AD72B9AE3FF00D37565 /* Assets.xcassets */; };
 		38472ADB2B9AE3FF00D37565 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38472ADA2B9AE3FF00D37565 /* Preview Assets.xcassets */; };
@@ -29,6 +32,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		382390612BA2BEF0009552D8 /* HeaderViewLoginPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewLoginPage.swift; sourceTree = "<group>"; };
+		382390632BA2D567009552D8 /* CustomLRButn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLRButn.swift; sourceTree = "<group>"; };
+		382390652BA2F373009552D8 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		38472AD02B9AE3FE00D37565 /* TodoAppUsingSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TodoAppUsingSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38472AD32B9AE3FE00D37565 /* TodoAppUsingSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoAppUsingSwiftUIApp.swift; sourceTree = "<group>"; };
 		38472AD72B9AE3FF00D37565 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -107,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				38472AE72B9AEB0400D37565 /* ToDomodel.swift */,
+				382390652BA2F373009552D8 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +151,8 @@
 				38472B042B9AEF4800D37565 /* LoginView.swift */,
 				38472B062B9AEF5600D37565 /* RegisterView.swift */,
 				38472B082B9AEF9A00D37565 /* ToDOCustomCellView.swift */,
+				382390612BA2BEF0009552D8 /* HeaderViewLoginPage.swift */,
+				382390632BA2D567009552D8 /* CustomLRButn.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,7 +302,10 @@
 				38472B072B9AEF5600D37565 /* RegisterView.swift in Sources */,
 				38472B0D2B9AF01700D37565 /* ProfileViewViewModel.swift in Sources */,
 				38472B032B9AEF3C00D37565 /* newItemAddView.swift in Sources */,
+				382390642BA2D567009552D8 /* CustomLRButn.swift in Sources */,
 				38472B0B2B9AF00500D37565 /* MainViewViewModel.swift in Sources */,
+				382390622BA2BEF1009552D8 /* HeaderViewLoginPage.swift in Sources */,
+				382390662BA2F373009552D8 /* UserModel.swift in Sources */,
 				38472AD42B9AE3FE00D37565 /* TodoAppUsingSwiftUIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

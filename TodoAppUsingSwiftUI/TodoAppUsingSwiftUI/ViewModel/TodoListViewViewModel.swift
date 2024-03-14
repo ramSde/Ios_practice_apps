@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class TodoListViewViewModel : ObservableObject {
+    
+    
+    @Published var showingnewItem = false
+}

@@ -7,6 +7,7 @@ target 'TodoAppUsingSwiftUI' do
   pod 'FirebaseCore', '~> 10.22'
   pod 'FirebaseAuth', '~> 10.22'
   pod 'FirebaseFirestore', '~> 10.22'
+  pod 'IQKeyboardManagerSwift', '~> 7.0'
   # Pods for TodoAppUsingSwiftUI
   
 
