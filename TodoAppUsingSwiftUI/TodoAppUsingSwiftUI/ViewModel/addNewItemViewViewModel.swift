@@ -17,7 +17,8 @@ class addnewTodoViewModel : ObservableObject {
             let db = Firestore.firestore()
             
             let newdata = ToDo(id: userid, task: title, dueDate: dueDate.timeIntervalSince1970, currentDate: Date().timeIntervalSince1970, isdone: false)
-            db.collection("users").document(userid).collection("todo data").addDocument(data: ["id":newdata.id, "task":newdata.task , "duedate": newdata.dueDate , "currentdate":newdata.currentDate,"isdone":newdata.isdone])
+            let id = UUID().uuidString
+            db.collection("users").document(userid).collection("todos").document(id).setData( ["id":id, "task":newdata.task , "dueDate": newdata.dueDate , "currentDate":newdata.currentDate,"isdone":newdata.isdone])
         }
         
     }

@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct ToDo{
+struct ToDo : Codable,Identifiable{
     let id: String
     let task : String
     let dueDate : TimeInterval

@@ -28,6 +28,7 @@
 		38472B112B9AF03D00D37565 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38472B102B9AF03D00D37565 /* LoginViewViewModel.swift */; };
 		38472B132B9AF04F00D37565 /* TodoListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38472B122B9AF04F00D37565 /* TodoListViewViewModel.swift */; };
 		38472B152B9AF06500D37565 /* addNewItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38472B142B9AF06500D37565 /* addNewItemViewViewModel.swift */; };
+		38D770592BA4305600F38842 /* TodoListItemVirewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38D770582BA4305600F38842 /* TodoListItemVirewModel.swift */; };
 		F8604A6DC85FA98C06A4F62D /* Pods_TodoAppUsingSwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB6C6DB9A025C72448840371 /* Pods_TodoAppUsingSwiftUI.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		38472B102B9AF03D00D37565 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
 		38472B122B9AF04F00D37565 /* TodoListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewViewModel.swift; sourceTree = "<group>"; };
 		38472B142B9AF06500D37565 /* addNewItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewItemViewViewModel.swift; sourceTree = "<group>"; };
+		38D770582BA4305600F38842 /* TodoListItemVirewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListItemVirewModel.swift; sourceTree = "<group>"; };
 		7B3F12E2FFF5DDBC9D9A63E2 /* Pods-TodoAppUsingSwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoAppUsingSwiftUI.release.xcconfig"; path = "Target Support Files/Pods-TodoAppUsingSwiftUI/Pods-TodoAppUsingSwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		CB5959A319BA389A630BEAD5 /* Pods-TodoAppUsingSwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodoAppUsingSwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-TodoAppUsingSwiftUI/Pods-TodoAppUsingSwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		DB6C6DB9A025C72448840371 /* Pods_TodoAppUsingSwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TodoAppUsingSwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 				38472B102B9AF03D00D37565 /* LoginViewViewModel.swift */,
 				38472B122B9AF04F00D37565 /* TodoListViewViewModel.swift */,
 				38472B142B9AF06500D37565 /* addNewItemViewViewModel.swift */,
+				38D770582BA4305600F38842 /* TodoListItemVirewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 				38472AE82B9AEB0500D37565 /* ToDomodel.swift in Sources */,
 				38472B092B9AEF9A00D37565 /* ToDOCustomCellView.swift in Sources */,
 				38472B132B9AF04F00D37565 /* TodoListViewViewModel.swift in Sources */,
+				38D770592BA4305600F38842 /* TodoListItemVirewModel.swift in Sources */,
 				38472B152B9AF06500D37565 /* addNewItemViewViewModel.swift in Sources */,
 				38472B012B9AEF1300D37565 /* TodoListView.swift in Sources */,
 				38472B112B9AF03D00D37565 /* LoginViewViewModel.swift in Sources */,
