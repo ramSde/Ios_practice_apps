@@ -68,13 +68,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thx-WB-EDG">
-                                        <rect key="frame" x="92.666666666666686" y="486" width="208" height="40"/>
+                                        <rect key="frame" x="112.33333333333333" y="486" width="168.33333333333337" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="J9G-A4-xcD"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="UCm-Aa-82y"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="gray" title="Pick Image From Gallery">
+                                        <buttonConfiguration key="configuration" style="gray" title="Click or pick Image">
                                             <color key="baseForegroundColor" systemColor="systemGroupedBackgroundColor"/>
                                         </buttonConfiguration>
                                         <connections>

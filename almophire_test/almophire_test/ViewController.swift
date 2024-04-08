@@ -21,7 +21,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
     
     @IBAction func PickImageButtonPressed(_ sender: UIButton) {
-        pickimage()
+        pickImage()
         
     }
     @IBAction func viewButtonTapped(_ sender: UIButton) {
@@ -33,6 +33,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     // Function to handle text field changes
+    
     
 
     func viewImage(url: String) {
@@ -95,30 +96,48 @@ class ViewController: UIViewController, UINavigationControllerDelegate {
 }
 
 
-extension ViewController: UIImagePickerControllerDelegate{
+extension ViewController: UIImagePickerControllerDelegate {
     
-    func pickimage() {
-         imagePicker.delegate = self
-         imagePicker.sourceType = .savedPhotosAlbum
-         imagePicker.allowsEditing = false
-
-         present(imagePicker, animated: true, completion: nil)
-     }
-     
-     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-         picker.dismiss(animated: true, completion: nil)
-         
-         if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
-             DispatchQueue.main.async {
-                 self.imageView.image = pickedImage
-             }
-         }
-     }
-     
-     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-         picker.dismiss(animated: true, completion: nil)
-     }
+    func pickImage() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.allowsEditing = false
+        
+        let alertController = UIAlertController(title: "Choose Image Source", message: nil, preferredStyle: .actionSheet)
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: .default) { _ in
+            if UIImagePickerController.isSourceTypeAvailable(.camera) {
+                imagePicker.sourceType = .camera
+                self.present(imagePicker, animated: true, completion: nil)
+            } else {
+                print("Camera is not available")
+            }
+        }
+        alertController.addAction(cameraAction)
+        
+        let photoLibraryAction = UIAlertAction(title: "Photo Library", style: .default) { _ in
+            imagePicker.sourceType = .photoLibrary
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        alertController.addAction(photoLibraryAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        if let pickedImage = info[.originalImage] as? UIImage {
+            imageView.image = pickedImage
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
 
 
